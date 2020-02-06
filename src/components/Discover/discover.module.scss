@@ -1,0 +1,52 @@
+.discoverContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.discoverGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 5rem 0;
+  align-items: center;
+}
+
+.discoverListingsContainer {
+  margin-right: 5rem;
+}
+
+.discoverTitle {
+  font-size: 4rem;
+  font-weight: 300;
+}
+
+.discoverListing {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  border-radius: 1rem;
+  padding: 2rem 4rem;
+  border: 1px solid var(--seed-text-body);
+  border-bottom-width: none;
+  &:last-child {
+    border-bottom-width: 1px;
+  }
+}
+
+.listingTitle {
+  font-size: 3rem;
+}
+
+.listingHeuristic {
+  color: var(--seed-color-secondary);
+  margin-left: 10px;
+  font-weight: 600;
+}
+
+.heuristicGrid {
+  display: grid;
+  margin: 1rem 0;
+  grid-template-columns: 1fr 1fr 1fr;
+}

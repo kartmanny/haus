@@ -1,0 +1,30 @@
+.footer {
+  display: grid;
+  min-height: 20rem;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 5rem;
+  background-color: var(--seed-color-primary);
+  flex-direction: column;
+  color: white;
+  place-items: center;
+  padding: 4rem;
+  margin-top: auto;
+  grid-template-areas: '. footer';
+}
+
+.footerContainer {
+  grid-area: footer;
+}
+
+.footerTitle {
+  font-size: 5rem;
+  text-align: right;
+  justify-self: right;
+}
+
+.footerText {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import washington from '../../assets/img/washington.svg';
+import outline from '../../assets/img/outline.svg';
 
 import styles from './footer.module.scss';
 
@@ -22,6 +23,16 @@ const Footer = () => {
           a city and we'll do the rest.
         </p>
       </div>
+      <img
+        height={350}
+        src={outline}
+        style={{
+          marginLeft: 'auto',
+          marginRight: '3rem',
+          border: '0 solid black'
+        }}
+        alt="Space Needle"
+      />
     </footer>
   );
 };

@@ -70,3 +70,13 @@
   font-size: 3rem;
   font-weight: 300;
 }
+
+.ctaLink {
+  padding: 0.75rem 2rem;
+  color: white;
+  border-radius: 6px;
+  background-color: var(--seed-color-primary);
+  &::after {
+    max-width: 0 !important;
+  }
+}

@@ -8,7 +8,6 @@
 .discoverGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 5rem 0;
   align-items: center;
 }
 
@@ -19,6 +18,7 @@
 .discoverTitle {
   font-size: 4rem;
   font-weight: 300;
+  margin-bottom: 0;
 }
 
 .discoverListing {
@@ -30,6 +30,8 @@
   padding: 2rem 4rem;
   border: 1px solid var(--seed-text-body);
   border-bottom-width: none;
+  margin: 15px 0;
+  cursor: pointer;
   &:last-child {
     border-bottom-width: 1px;
   }

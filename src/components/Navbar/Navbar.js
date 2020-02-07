@@ -1,9 +1,10 @@
 import React from 'react';
+import cx from 'classnames';
 import { Link } from 'react-router-dom';
 
 import styles from './navbar.module.scss';
 
-const Navbar = ({ items }) => (
+const Navbar = ({ routes }) => (
   <nav className={styles.navbar}>
     <ul className={styles.navItemList}>
       <Link className={styles.logoContainer} to="/">
@@ -12,9 +13,12 @@ const Navbar = ({ items }) => (
         </div>
         <h2 className={styles.logoText}>Haüs</h2>
       </Link>
-      {items.map(item => (
-        <Link to={`/${item.url}`} className={styles.navItem}>
-          {item.name}
+      {routes.map(route => (
+        <Link
+          to={`/${route.url}`}
+          className={cx(route.cta && styles.ctaLink, styles.navItem)}
+        >
+          {route.name}
         </Link>
       ))}
     </ul>

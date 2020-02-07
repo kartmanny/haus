@@ -1,8 +1,8 @@
 .footer {
   display: grid;
   min-height: 20rem;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 5rem;
+  grid-template-columns: 25rem 1fr 25rem;
+  grid-column-gap: 15rem;
   background-color: var(--seed-color-primary);
   flex-direction: column;
   color: white;

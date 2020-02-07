@@ -8,16 +8,16 @@ import Footer from './components/Footer/Footer';
 import './assets/styles/app.scss';
 
 const ROUTES = [
-  { name: 'Home', url: 'haus/home' },
-  { name: 'Login', url: 'haus/login' },
-  { name: 'Discover', url: 'haus/discover' }
+  { name: 'Home', url: 'haus/home', cta: false },
+  { name: 'Discover', url: 'haus/discover', cta: false },
+  { name: 'Login', url: 'haus/login', cta: true }
 ];
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar items={ROUTES} />
+        <Navbar routes={ROUTES} />
         <Switch>
           <Route exact path="/haus/discover" component={() => <Discover />} />
           <Route

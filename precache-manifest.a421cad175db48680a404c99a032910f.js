@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a0619c15e0b5040048e4871f70418b29",
+    "revision": "a3e5c1c4dbde2d37c2c439cdda8b91a4",
     "url": "/haus/index.html"
   },
   {
-    "revision": "d2dc65d5d9bfb5a80f24",
-    "url": "/haus/static/css/main.329c47a2.chunk.css"
+    "revision": "da07d22641812c043ca9",
+    "url": "/haus/static/css/main.83e6e014.chunk.css"
   },
   {
-    "revision": "c6ba8bcfa755838ab17d",
-    "url": "/haus/static/js/2.8eaaaa07.chunk.js"
+    "revision": "d43286eb2069276ffd2d",
+    "url": "/haus/static/js/2.c3f46e8f.chunk.js"
   },
   {
     "revision": "bf23039b4e70a07c5aeb1b4010df3572",
-    "url": "/haus/static/js/2.8eaaaa07.chunk.js.LICENSE.txt"
+    "url": "/haus/static/js/2.c3f46e8f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d2dc65d5d9bfb5a80f24",
-    "url": "/haus/static/js/main.bce5feec.chunk.js"
+    "revision": "da07d22641812c043ca9",
+    "url": "/haus/static/js/main.6cc462bf.chunk.js"
   },
   {
     "revision": "5fa6b34678216e770207",
@@ -32,6 +32,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/haus/static/media/mediumItalic.9e0cb598.otf"
   },
   {
+    "revision": "173178e41b331cb4487d597b71dd57d7",
+    "url": "/haus/static/media/outline-red.173178e4.svg"
+  },
+  {
+    "revision": "0103b795b40a15f699dd1bc8efec1b4c",
+    "url": "/haus/static/media/outline.0103b795.svg"
+  },
+  {
     "revision": "cc4e72bde1aa38ceeb75e0c140ffa99c",
     "url": "/haus/static/media/regular.cc4e72bd.otf"
   },
@@ -42,10 +50,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ceec3f62f0a6da60ff39896fa1021191",
     "url": "/haus/static/media/search.ceec3f62.svg"
-  },
-  {
-    "revision": "d50512dcf8dea3d20be9a300b944680b",
-    "url": "/haus/static/media/seattle.d50512dc.jpg"
   },
   {
     "revision": "70ec86e38aa91f3785e6dfd5c1a996a9",

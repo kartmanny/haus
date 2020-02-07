@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "98df733c36c4f2cfba0e13ec0638388f",
+    "revision": "6cc276ccb8b8ee7d41fef6a3abe8954f",
     "url": "/haus/index.html"
   },
   {
-    "revision": "982d2f945288aef25c73",
-    "url": "/haus/static/css/main.87ad2e7f.chunk.css"
+    "revision": "c28dd624a6e0d8b6c358",
+    "url": "/haus/static/css/main.6f393bc5.chunk.css"
   },
   {
-    "revision": "a44d6612edf480e76159",
-    "url": "/haus/static/js/2.5c7c528c.chunk.js"
+    "revision": "c6ba8bcfa755838ab17d",
+    "url": "/haus/static/js/2.8eaaaa07.chunk.js"
   },
   {
     "revision": "bf23039b4e70a07c5aeb1b4010df3572",
-    "url": "/haus/static/js/2.5c7c528c.chunk.js.LICENSE.txt"
+    "url": "/haus/static/js/2.8eaaaa07.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "982d2f945288aef25c73",
-    "url": "/haus/static/js/main.9f4dfdce.chunk.js"
+    "revision": "c28dd624a6e0d8b6c358",
+    "url": "/haus/static/js/main.5b11738c.chunk.js"
   },
   {
     "revision": "5fa6b34678216e770207",
@@ -42,6 +42,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ceec3f62f0a6da60ff39896fa1021191",
     "url": "/haus/static/media/search.ceec3f62.svg"
+  },
+  {
+    "revision": "d50512dcf8dea3d20be9a300b944680b",
+    "url": "/haus/static/media/seattle.d50512dc.jpg"
   },
   {
     "revision": "70ec86e38aa91f3785e6dfd5c1a996a9",

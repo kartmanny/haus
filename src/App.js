@@ -21,14 +21,10 @@ function App() {
       <BrowserRouter>
         <Navbar routes={ROUTES} />
         <Switch>
+          <Route exact path={`/haus/discover`} component={() => <Discover />} />
           <Route
             exact
-            path={`${process.env.PUBLIC_URL}/haus/discover`}
-            component={() => <Discover />}
-          />
-          <Route
-            exact
-            path={`${process.env.PUBLIC_URL}/haus/login`}
+            path={`/haus/login`}
             component={() => (
               <h1
                 style={{
@@ -41,10 +37,7 @@ function App() {
               </h1>
             )}
           />
-          <Route
-            path={`${process.env.PUBLIC_URL}/`}
-            component={() => <Hero />}
-          />
+          <Route path={`/`} component={() => <Hero />} />
         </Switch>
       </BrowserRouter>
       <Footer />

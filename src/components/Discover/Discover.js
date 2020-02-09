@@ -1,10 +1,27 @@
 import React from 'react';
+
 import DiscoverListings from './DiscoverListings';
+import Text from '../Text/Text';
+
 import styles from './discover.module.scss';
 
 import './svg-styles.scss';
 
-const Icon = ({ fill }) => (
+const Discover = () => {
+  return (
+    <div className={styles.discoverGrid}>
+      <div className={styles.discoverContainer}>
+        <h2 className={styles.discoverTitle}>
+          <Text type="title1">Seattle</Text>
+        </h2>
+        <Map />
+      </div>
+      <DiscoverListings />
+    </div>
+  );
+};
+
+const Map = () => (
   <svg
     version="1.1"
     x="0px"
@@ -539,17 +556,5 @@ const Icon = ({ fill }) => (
     </g>
   </svg>
 );
-
-const Discover = () => {
-  return (
-    <div className={styles.discoverGrid}>
-      <div className={styles.discoverContainer}>
-        <h2 className={styles.discoverTitle}>Seattle</h2>
-        <Icon />
-      </div>
-      <DiscoverListings />
-    </div>
-  );
-};
 
 export default Discover;

@@ -1,4 +1,6 @@
 import React from 'react';
+
+import Text from '../Text/Text';
 import styles from './discover.module.scss';
 
 const LISTINGS = [
@@ -14,18 +16,25 @@ const DiscoverListings = () => {
     <div className={styles.discoverListingsContainer}>
       {LISTINGS.map(({ name, score, population, schools }) => (
         <div className={styles.discoverListing}>
-          <span className={styles.listingTitle}>{name}</span>
+          <Text type="title2">{name}</Text>
           <div className={styles.heuristicGrid}>
             <span>
-              Haüs Score:
-              <span className={styles.listingHeuristic}>{score}</span>
+              <Text type="large">Haüs Score:</Text>
+              <Text type="large" className={styles.score}>
+                {score}
+              </Text>
             </span>
             <span>
-              Population:
-              <span className={styles.listingHeuristic}>{population}</span>
+              <Text type="large">Population:</Text>
+              <Text type="large" className={styles.score}>
+                {population}
+              </Text>
             </span>
             <span>
-              Schools:<span className={styles.listingHeuristic}>{schools}</span>
+              <Text type="large">School:</Text>
+              <Text type="large" className={styles.score}>
+                {schools}
+              </Text>
             </span>
           </div>
         </div>

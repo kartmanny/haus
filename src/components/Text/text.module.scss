@@ -1,0 +1,46 @@
+.title1,
+.title2,
+.title3 {
+  color: var(--seed-text-heading);
+  display: inline-block;
+}
+
+.title1 {
+  font-size: 4.4rem;
+  font-weight: 500;
+  line-height: 5.6rem;
+}
+
+.title2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 3.6rem;
+}
+
+.title3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+}
+
+.large,
+.regular,
+.small {
+  color: var(--seed-text-body);
+  display: inline-block;
+}
+
+.large {
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+}
+
+.regular {
+  font-size: 1.7rem;
+  line-height: 2.2rem;
+}
+
+.small {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+}

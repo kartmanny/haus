@@ -17,8 +17,9 @@ const Navbar = ({ routes }) => (
           Haüs
         </Text>
       </Link>
-      {routes.map(route => (
+      {routes.map((route, index) => (
         <Link
+          key={index}
           to={`/${route.url}`}
           className={cx(route.cta && styles.ctaLink, styles.navItem)}
         >

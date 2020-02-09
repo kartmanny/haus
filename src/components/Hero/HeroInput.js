@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
@@ -8,6 +8,7 @@ import search from '../../assets/img/search.svg';
 import styles from './hero.module.scss';
 
 const HeroInput = ({ id, placeholder }) => {
+  const linkRef = useRef(null);
   const handleOnChange = event => {
     const value = event.target.value;
     setValue(value);
@@ -15,6 +16,14 @@ const HeroInput = ({ id, placeholder }) => {
       setIsActive(true);
     }
   };
+
+  const onKeyPress = event => {
+    const isEnterKeyPressed = event.nativeEvent.keyCode === 13;
+    if (isEnterKeyPressed) {
+      linkRef.current.click();
+    }
+  };
+
   const [isActive, setIsActive] = useState(false);
   const [value, setValue] = useState('');
 
@@ -34,12 +43,13 @@ const HeroInput = ({ id, placeholder }) => {
         id={id}
         className={cx(styles.heroInput, isActive && styles.activeBorder)}
         onFocus={() => setIsActive(true)}
+        onKeyPress={onKeyPress}
         onBlur={() => setIsActive(!!value)}
         onChange={handleOnChange}
         type="text"
         required
       />
-      <Link to="/haus/discover">
+      <Link ref={linkRef} to="/haus/discover">
         <img
           className={cx(styles.heroButton, styles.search)}
           src={search}

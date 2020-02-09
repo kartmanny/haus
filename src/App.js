@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
@@ -18,7 +18,7 @@ const ROUTES = [
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar routes={ROUTES} />
         <Switch>
           <Route
@@ -46,7 +46,7 @@ function App() {
             component={() => <Hero />}
           />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </>
   );

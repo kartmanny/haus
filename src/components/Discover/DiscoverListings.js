@@ -15,7 +15,7 @@ const DiscoverListings = () => {
   return (
     <div className={styles.discoverListingsContainer}>
       {LISTINGS.map(({ name, score, population, schools }) => (
-        <div className={styles.discoverListing}>
+        <div className={styles.discoverListing} key={name}>
           <Text type="title2">{name}</Text>
           <div className={styles.heuristicGrid}>
             <span>

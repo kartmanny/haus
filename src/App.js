@@ -28,8 +28,6 @@ function App() {
             component={() => (
               <h1
                 style={{
-                  fontWeight: 300,
-                  fontSize: '4rem',
                   textAlign: 'center'
                 }}
               >

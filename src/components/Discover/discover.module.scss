@@ -53,6 +53,11 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.score {
+  color: var(--seed-color-secondary);
+  margin-left: 0.5rem;
+}
+
 .svg {
   height: 750px;
 }

@@ -1,4 +1,7 @@
 import React from 'react';
+
+import Text from '../Text/Text';
+
 import washington from '../../assets/img/washington.svg';
 import outline from '../../assets/img/outline.svg';
 
@@ -14,14 +17,16 @@ const Footer = () => {
         alt="Space Needle"
       />
       <div className={styles.footerContainer}>
-        <span className={styles.footerTitle}>Haüs</span>
-        <p className={styles.footerText}>
+        <Text type="title1" className={styles.footerTitle}>
+          Haüs
+        </Text>
+        <Text type="large" className={styles.footerText}>
           Your home's location is super important. There's no need to have tons
           of tabs open just to compare various listings and neighborhoods when
           you're trying to find your dream home. With Haüs, you'll be able to
           find the perfect neighborhood for your home – give it a try! Search up
           a city and we'll do the rest.
-        </p>
+        </Text>
       </div>
       <img
         height={350}

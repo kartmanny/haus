@@ -5,6 +5,8 @@ import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
 import Discover from './components/Discover/Discover';
 import Footer from './components/Footer/Footer';
+import Text from './components/Text/Text';
+
 import './assets/styles/app.scss';
 
 const ROUTES = [
@@ -31,7 +33,7 @@ function App() {
                   textAlign: 'center'
                 }}
               >
-                Login & Register Page
+                <Text type="title1">Login & Register Page</Text>
               </h1>
             )}
           />

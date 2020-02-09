@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
+import Text from '../Text/Text';
+
 import search from '../../assets/img/search.svg';
 import styles from './hero.module.scss';
 
@@ -26,7 +28,7 @@ const HeroInput = ({ id, placeholder }) => {
         className={cx(styles.heroInputPlaceholder, isActive && styles.active)}
         htmlFor={id}
       >
-        {placeholder}
+        <Text type="large">{placeholder}</Text>
       </label>
       <input
         id={id}

@@ -5,7 +5,7 @@
   grid-column-gap: 15rem;
   background-color: var(--seed-color-primary);
   flex-direction: column;
-  color: white;
+  color: var(--seed-white);
   place-items: center;
   padding: 4rem;
   margin-top: auto;
@@ -17,14 +17,14 @@
 }
 
 .footerTitle {
-  font-size: 5rem;
+  color: var(--seed-white);
   text-align: right;
   justify-self: right;
 }
 
 .footerText {
-  font-size: 2rem;
   margin: 0;
+  color: var(--seed-white);
   padding: 0;
   margin-right: auto;
 }

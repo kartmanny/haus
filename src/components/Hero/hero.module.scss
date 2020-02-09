@@ -14,11 +14,10 @@
 }
 
 .heroSubtitle {
-  font-weight: 300;
-  font-size: 3rem;
   margin: 0;
   padding: 0;
-  color: var(--seed-text-body);
+  font-weight: 400 !important;
+  color: var(--seed-text-body) !important;
 }
 
 .heroGrid {
@@ -32,7 +31,7 @@
 
 .heroInput {
   outline: none;
-  font-size: 3rem;
+  font-size: 2.4rem;
   border: none;
   border-bottom: 2px solid #eaeaea;
   width: 80%;
@@ -41,21 +40,19 @@
 
 .heroInputContainer {
   position: relative;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
   display: flex;
 }
 
 .heroInputPlaceholder {
   position: absolute;
   bottom: 10px;
-  font-size: 3rem;
   color: var(--seed-text-body);
-  font-weight: 300;
   transition: transform 0.2s;
 }
 
 .active {
-  transform: translateY(-45px);
+  transform: translateY(-35px);
 }
 
 .activeBorder {

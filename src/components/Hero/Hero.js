@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroInput from './HeroInput';
-
+import Text from '../Text/Text';
 import styles from './hero.module.scss';
 
 const Hero = props => {
@@ -8,9 +8,9 @@ const Hero = props => {
     <div className={styles.heroGrid}>
       <div className={styles.hero}>
         <h1 className={styles.heroTitle}>Haüs</h1>
-        <h2 className={styles.heroSubtitle}>
+        <Text type="title3" className={styles.heroSubtitle}>
           We'll help you find the perfect neighborhood.
-        </h2>
+        </Text>
       </div>
       <HeroInput placeholder="Search for a city" id="heroInput" />
     </div>

@@ -6,28 +6,24 @@
 .dashboardContainer {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 80rem;
+  height: 800px;
 }
 
 .dashboardNav {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 1.5rem;
-  border-bottom: 2px solid var(--seed-border-light);
+  width: 100%;
+  padding: 1%;
 }
 
-.dashboardReportCard {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-  border: #dad8d8 solid 1px;
-  border-radius: 3px;
-  padding: 3%;
+.dashboardCategoryTitle {
+  width: 100%;
+  padding: 1%;
+  padding-top: 3%;
 }
 
 .dashboardTitle {
   width: 50%;
-  padding-top: 20px;
   display: grid;
 }
 .dashboardScore {
@@ -40,14 +36,22 @@
   color: #ffeaea;
 }
 
-.dashboardStats {
-  display: block;
+.dashboardContainer::-webkit-scrollbar-thumb {
+  background: rgb(206, 205, 205);
+  border-radius: 20px;
 }
 
-.dashboardCategoryTitle {
-  width: 100%;
-  padding: 1%;
-  padding-top: 3%;
+.dashboardContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+}
+
+.dashboardParts {
+  height: 300px;
+}
+
+.dashboardResident {
+  display: block;
 }
 
 .dashboardContainer::-webkit-scrollbar {
@@ -62,13 +66,4 @@
 .dashboardContainer::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 20px;
-}
-
-.plus {
-  margin: auto 0px;
-}
-.add {
-  display: block;
-  padding: 1rem;
-  cursor: pointer;
 }

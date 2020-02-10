@@ -1,6 +1,7 @@
 import React from 'react';
 
-import DiscoverListings from './DiscoverListings';
+//import DiscoverListings from './DiscoverListings';
+import Dashboard from '../Dashboard/Dashboard';
 import Text from '../Text/Text';
 
 import styles from './discover.module.scss';
@@ -16,7 +17,7 @@ const Discover = () => {
         </h2>
         <Map />
       </div>
-      <DiscoverListings />
+      <Dashboard /> 
     </div>
   );
 };

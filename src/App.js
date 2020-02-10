@@ -23,7 +23,7 @@ function App() {
         <Switch>
           <Route exact path="/haus/discover" component={() => <Discover />} />
           <Route
-            exact
+            exacts
             path="/haus/login"
             component={() => (
               <h1

@@ -1,6 +1,26 @@
 import React from 'react';
 
-import styles from 'components/Map/map.module.scss';
+//import DiscoverListings from './DiscoverListings';
+import Dashboard from '../Dashboard/Dashboard';
+import Text from '../Text/Text';
+
+import styles from './discover.module.scss';
+
+import './svg-styles.scss';
+
+const Discover = () => {
+  return (
+    <div className={styles.discoverGrid}>
+      <div className={styles.discoverContainer}>
+        <h2 className={styles.discoverTitle}>
+          <Text type="title1">Seattle</Text>
+        </h2>
+        <Map />
+      </div>
+      <Dashboard />
+    </div>
+  );
+};
 
 const Map = () => (
   <svg

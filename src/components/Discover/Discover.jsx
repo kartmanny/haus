@@ -20,7 +20,9 @@ const reportCard = [
 const _data = { 
   barData: [79565, 55322], 
   pieData: [42.2, 26.5, 17.1, 3.2, 11], 
-  lineData: [200000, 250000, 400000, 420000, 500000, 380000, 600000]
+  lineData: [200000, 250000, 400000, 420000, 500000, 380000, 600000],
+  crimeData: [[330, 5582], [463, 2784]],
+  rentOwned: [53, 47]
 }
 >>>>>>> Allow passing of data for graphs
 const DiscoverGrid = styled.div`

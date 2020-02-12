@@ -1,22 +1,32 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import DiscoverListings from 'components/Discover/DiscoverListings';
 import Text from 'components/Text';
 import Map from 'components/Map';
 
-import styles from 'components/Discover/discover.module.scss';
+const DiscoverGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+`;
+
+const DiscoverContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Discover = () => {
   return (
-    <div className={styles.discoverGrid}>
-      <div className={styles.discoverContainer}>
-        <h2 className={styles.discoverTitle}>
-          <Text type="title1">Seattle</Text>
-        </h2>
+    <DiscoverGrid>
+      <DiscoverContainer>
+        <Text type="title1">Seattle</Text>
         <Map />
-      </div>
+      </DiscoverContainer>
       <DiscoverListings />
-    </div>
+    </DiscoverGrid>
   );
 };
 

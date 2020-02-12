@@ -2,10 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-import Text from '../Text/Text';
+import Text from 'components/Text';
 
-import search from '../../assets/img/search.svg';
-import styles from './hero.module.scss';
+import search from 'assets/img/search.svg';
+import styles from 'components/Hero/HeroInput/heroinput.module.scss';
 
 const HeroInput = ({ id, placeholder }) => {
   const linkRef = useRef(null);

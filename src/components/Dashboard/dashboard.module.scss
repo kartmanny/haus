@@ -47,10 +47,12 @@
 .dashboardCategoryTitle { 
     width: 100%;
     padding: 1%;
+    padding-top: 3%;
 }
 
 .dashboardParts { 
-    height: 300px;
+    display: block;
+    height: 500px;
 }
 
 .dashboardResident { 

@@ -1,11 +1,11 @@
 import React from 'react';
 
-import DiscoverListings from './DiscoverListings';
-import Text from '../Text/Text';
+import DiscoverListings from 'components/Discover/DiscoverListings';
+import Text from 'components/Text';
 
-import styles from './discover.module.scss';
+import styles from 'components/Discover/discover.module.scss';
 
-import './svg-styles.scss';
+import 'components/Discover/svg-styles.scss';
 
 const Discover = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import cx from 'classnames';
-import classes from './text.module.scss';
+import classes from 'components/Text/text.module.scss';
 
 /*
  * @param type   "title1" | "title2" | "title3" | "large" | "regular" | "small"

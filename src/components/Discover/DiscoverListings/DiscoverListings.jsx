@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Text from '../Text/Text';
-import styles from './discover.module.scss';
+import Text from 'components/Text';
+import styles from 'components/Discover/discover.module.scss';
 
 const LISTINGS = [
   { name: 'Queen Anne', score: 97, population: 3500, schools: 'A+' },

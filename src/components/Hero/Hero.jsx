@@ -1,7 +1,7 @@
 import React from 'react';
-import HeroInput from './HeroInput';
-import Text from '../Text/Text';
-import styles from './hero.module.scss';
+import HeroInput from 'components/Hero/HeroInput';
+import Text from 'components/Text';
+import styles from 'components/Hero/hero.module.scss';
 
 const Hero = props => {
   return (

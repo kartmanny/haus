@@ -2,9 +2,8 @@ import React from 'react';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 
-import Text from '../Text/Text';
-
-import styles from './navbar.module.scss';
+import Text from 'components/Text';
+import styles from 'components/Navbar/navbar.module.scss';
 
 const Navbar = ({ routes }) => (
   <nav className={styles.navbar}>

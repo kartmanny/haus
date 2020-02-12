@@ -29,13 +29,14 @@ const SwitchSelect = ({ components }) => {
   return (
     <Container>
       <Switch columns={components.length}>
-        {components.map(({ name, component }) => (
+        {components.map(({ name, component }, index) => (
           <div
             className={cx(
               styles.switchItem,
               view === component && styles.active
             )}
             id={name}
+            key={index}
             onClick={() => setView(component)}
           >
             <Text type="large" className={styles.switchItemText}>

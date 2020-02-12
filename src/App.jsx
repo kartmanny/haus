@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Navbar from 'components/Navbar/Navbar';
-import Hero from 'components/Hero/Hero';
-import Discover from 'components/Discover/Discover';
-import Footer from 'components/Footer/Footer';
-import Auth from 'components/Auth/Auth';
+import Navbar from 'components/Navbar';
+import Hero from 'components/Hero';
+import Discover from 'components/Discover';
+import Footer from 'components/Footer';
+import Auth from 'components/Auth';
 
 import 'assets/styles/app.scss';
 

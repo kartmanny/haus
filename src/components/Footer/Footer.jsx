@@ -1,11 +1,9 @@
 import React from 'react';
+import washington from 'assets/img/washington.svg';
+import outline from 'assets/img/outline.svg';
 
-import Text from '../Text/Text';
-
-import washington from '../../assets/img/washington.svg';
-import outline from '../../assets/img/outline.svg';
-
-import styles from './footer.module.scss';
+import Text from 'components/Text';
+import styles from 'components/Footer/footer.module.scss';
 
 const Footer = () => {
   return (

@@ -19,6 +19,9 @@
   left: 0;
   &.active {
     transform: translateY(-30px);
+    span {
+      color: var(--seed-text-body-light);
+    }
   }
 }
 

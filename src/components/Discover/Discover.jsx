@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DiscoverListings from 'components/Discover/DiscoverListings';
+import Listings from 'components/Listings';
 import Text from 'components/Text';
 import Map from 'components/Map';
 
@@ -18,6 +18,29 @@ const DiscoverContainer = styled.div`
   align-items: center;
 `;
 
+const LISTINGS = [
+  {
+    name: 'Queen Anne',
+    scores: [{ score: 97 }, { population: 3500 }, { schools: 'A+' }]
+  },
+  {
+    name: 'West Queen Anne',
+    scores: [{ score: 95 }, { population: 4000 }, { schools: 'A-' }]
+  },
+  {
+    name: 'South Lake Union',
+    scores: [{ score: 85 }, { population: 3750 }, { schools: 'A-' }]
+  },
+  {
+    name: 'Westlake',
+    scores: [{ score: 78 }, { population: 1500 }, { schools: 'B+' }]
+  },
+  {
+    name: 'Capitol Hill',
+    scores: [{ score: 75 }, { population: 2500 }, { schools: 'A+' }]
+  }
+];
+
 const Discover = () => {
   return (
     <DiscoverGrid>
@@ -25,7 +48,7 @@ const Discover = () => {
         <Text type="title1">Seattle</Text>
         <Map />
       </DiscoverContainer>
-      <DiscoverListings />
+      <Listings listings={LISTINGS} />
     </DiscoverGrid>
   );
 };

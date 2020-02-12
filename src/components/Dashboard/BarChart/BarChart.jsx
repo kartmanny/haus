@@ -1,53 +1,55 @@
 import React from 'react';
-import { HorizontalBar, defaults} from 'react-chartjs-2';
+import { HorizontalBar, defaults } from 'react-chartjs-2';
 
 //defaults.global.defaultFontFamily = 'Brandon';
 
-const BarChart = ({barData}) => {
-    const state = {
-        labels: ['Median Average Income', 'National Median Average Income'],
-        datasets: [
-            {
-                backgroundColor: ['#ff5a5f', '#484848'],
-                barThickness: 50,
-                data: barData
-            },
-    
-        ]
-    }
-    return (
-        <div>
-            <HorizontalBar
-                data={state}
-                options={{
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    legend: {
-                        display: false,
-                    },
-                    scales: {
-                        xAxes: [{
-                            gridLines: {
-                                display: false
-                            },
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }],
-                    },
-                    layout: {
-                        padding: {
-                            right: 0,
-                        }
-                    },
-                    tooltips: {
-                        enabled: true,
-                        callbacks: {
-                            label: (item, data) => `$${data.datasets[item.datasetIndex].data[item.index]}`
-                        },
-                    },
-                    animation: {
-                        /*duration: 1,
+const BarChart = ({ barData }) => {
+  const state = {
+    labels: ['Median Average Income', 'National Median Average Income'],
+    datasets: [
+      {
+        backgroundColor: ['#ff5a5f', '#484848'],
+        barThickness: 50,
+        data: barData
+      }
+    ]
+  };
+  return (
+    <div>
+      <HorizontalBar
+        data={state}
+        options={{
+          responsive: true,
+          maintainAspectRatio: false,
+          legend: {
+            display: false
+          },
+          scales: {
+            xAxes: [
+              {
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero: true
+                }
+              }
+            ]
+          },
+          layout: {
+            padding: {
+              right: 0
+            }
+          },
+          tooltips: {
+            enabled: true,
+            callbacks: {
+              label: (item, data) =>
+                `$${data.datasets[item.datasetIndex].data[item.index]}`
+            }
+          },
+          animation: {
+            /*duration: 1,
                         onComplete: function () {
                             var chartInst = this.chart;
                             var ctx = chartInst.ctx;
@@ -65,13 +67,11 @@ const BarChart = ({barData}) => {
                             });
 
                         }*/
-                    }
-
-                }}
-
-            />
-        </div>
-    );
+          }
+        }}
+      />
+    </div>
+  );
 };
 
 export default BarChart;

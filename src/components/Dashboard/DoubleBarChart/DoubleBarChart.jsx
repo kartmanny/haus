@@ -1,48 +1,55 @@
 import React from 'react';
-import { Line } from 'react-chartjs-2';
+import { HorizontalBar, defaults} from 'react-chartjs-2';
 
-const LineChart = ({lineData}) => {
+//defaults.global.defaultFontFamily = 'Brandon';
+
+const DoubleBarChart = ({barData}) => {
     const state = {
-        labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020'],
+        labels: ['Violent Crimes', 'Property Crimes'],
         datasets: [
             {
-                borderWidth: 1,
-                lineTension: 0.1,
+                label: 'WestLake Average',
                 backgroundColor: 'rgba(75,192,192,0.4)',
-                borderColor: 'rgba(75,192,192,1)',
-                data: lineData
-            },
-    
+                data: barData[0]
+            }, 
+            {
+                label: 'National Average',
+                backgroundColor: '#484848',
+                data: barData[1]
+            }
         ]
     }
     return (
         <div>
-            <Line
+            <HorizontalBar
                 data={state}
                 options={{
                     responsive: true,
                     maintainAspectRatio: true,
                     legend: {
-                        display: false,
+                        display: true,
                     },
                     scales: {
-                        yAxes: [{
+                        xAxes: [{
+                            gridLines: {
+                                display: false
+                            },
                             ticks: {
-                                reverse: false
+                                beginAtZero: true
                             }
-                        }]
+                        }],
                     },
                     layout: {
                         padding: {
-                            left: 10,
+                            right: 0,
                         }
                     },
                     tooltips: {
+                        enabled: true,
                         callbacks: {
                             label: (item, data) => `$${data.datasets[item.datasetIndex].data[item.index]}`
                         },
-                    }
-
+                    },
                 }}
 
             />
@@ -50,4 +57,6 @@ const LineChart = ({lineData}) => {
     );
 };
 
-export default LineChart;
+export default DoubleBarChart;
+
+

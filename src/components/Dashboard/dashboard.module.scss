@@ -13,7 +13,7 @@
 .dashboardNav { 
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    --width: 100%;
     padding: 1%;
 }
 
@@ -28,6 +28,7 @@
 
 .dashboardTitle { 
     width: 50%;
+    padding-top: 20px;
     display: grid;
 }
 .dashboardScore { 
@@ -47,16 +48,7 @@
 .dashboardCategoryTitle { 
     width: 100%;
     padding: 1%;
-    padding-top: 3%;
-}
-
-.dashboardParts { 
-    display: block;
-    height: 500px;
-}
-
-.dashboardResident { 
-    display: block;
+    --padding-top: 3%;
 }
 
 .dashboardContainer::-webkit-scrollbar {
@@ -71,5 +63,15 @@
 .dashboardContainer::-webkit-scrollbar-track {
     background:#f1f1f1;
     border-radius: 20px;
+}
+
+.plus { 
+    margin: auto 0px;
+}
+.add {
+    display: block;
+    padding: 1rem;
+    cursor: pointer;
+
 }
 

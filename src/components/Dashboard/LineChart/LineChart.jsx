@@ -1,22 +1,21 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
-const state = {
-    labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020'],
-    datasets: [
-        {
-            backgroundColor: ['#3ee05a', '#ff5a5f', '#fcbc5e', '#f4866b', '#58c8ce'],
-            data: [200000, 250000, 400000, 420000, 500000, 380000, 600000],
-            borderWidth: 1,
-            lineTension: 0.1,
-            backgroundColor: 'rgba(75,192,192,0.4)',
-            borderColor: 'rgba(75,192,192,1)',
-        },
-
-    ]
-}
-
-const LineChart = () => {
+const LineChart = ({lineData}) => {
+    const state = {
+        labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020'],
+        datasets: [
+            {
+                backgroundColor: ['#3ee05a', '#ff5a5f', '#fcbc5e', '#f4866b', '#58c8ce'],
+                borderWidth: 1,
+                lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+                data: lineData
+            },
+    
+        ]
+    }
     return (
         <div>
             <Line

@@ -7,7 +7,7 @@ import PieChart from 'components/Dashboard/PieChart'
 import LineChart from 'components/Dashboard/LineChart'
 import favorite from '../../assets/img/favorite.svg';
 
-const Dashboard = ({ dashboardTitle, reportCard }) => {
+const Dashboard = ({ dashboardTitle, reportCard, data }) => {
     return (
         <div className={styles.dashboard}>
             <div className={styles.dashboardNav}>
@@ -29,16 +29,16 @@ const Dashboard = ({ dashboardTitle, reportCard }) => {
                 <Text type="title2" className={styles.dashboardCategoryTitle}>About the Residents</Text>
                 <div className={styles.dashboardResident}>
                     <Text type="large" className={styles.dashboardCategoryTitle}>Average Median Salary</Text>
-                    <BarChart></BarChart>
+                    <BarChart barData={data.barData}></BarChart>
                     <Text type="large" className={styles.dashboardCategoryTitle}>Educational Diversity</Text>
-                    <PieChart></PieChart>
+                    <PieChart pieData={data.pieData}></PieChart>
 
                 </div>
 
                 <Text type="title2" className={styles.dashboardCategoryTitle}>About the Homes</Text>
                 <Text type="large" className={styles.dashboardCategoryTitle}>Appreciation</Text>
                 <div className={styles.dashboardParts}>
-                    <LineChart></LineChart>
+                    <LineChart lineData={data.lineData}></LineChart>
                 </div>
                 <Text type="large" className={styles.dashboardCategoryTitle}>Rent vs. Owned Households</Text>
 

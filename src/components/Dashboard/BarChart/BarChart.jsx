@@ -3,19 +3,20 @@ import { HorizontalBar, defaults} from 'react-chartjs-2';
 
 //defaults.global.defaultFontFamily = 'Brandon';
 
-const state = {
-    labels: ['Median Average Income', 'National Median Average Income'],
-    datasets: [
-        {
-            backgroundColor: ['#ff5a5f', '#484848'],
-            data: [79565, 55322],
-            barThickness: 50,
-        },
 
-    ]
-}
 
-const BarChart = () => {
+const BarChart = ({barData}) => {
+    const state = {
+        labels: ['Median Average Income', 'National Median Average Income'],
+        datasets: [
+            {
+                backgroundColor: ['#ff5a5f', '#484848'],
+                barThickness: 50,
+                data: barData
+            },
+    
+        ]
+    }
     return (
         <div>
             <HorizontalBar

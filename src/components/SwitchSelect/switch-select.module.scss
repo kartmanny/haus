@@ -1,0 +1,27 @@
+.switchItem {
+  border: 1px solid var(--seed-color-primary);
+  border-right-width: 0;
+  padding: 0.5rem 6rem;
+  color: var(--seed-color-primary);
+  transition: background-color 0.2s;
+  cursor: pointer;
+  &.active {
+    background-color: var(--seed-color-primary);
+    .switchItemText {
+      color: var(--seed-white);
+    }
+  }
+  &:last-of-type {
+    border-right-width: 1px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+  &:first-of-type {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+  }
+}
+
+.switchItemText {
+  color: var(--seed-color-primary);
+}

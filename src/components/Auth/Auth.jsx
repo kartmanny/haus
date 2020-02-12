@@ -19,7 +19,7 @@ const COMPONENTS = [
 const AuthPage = () => {
   return (
     <AuthContainer>
-      <Text type="title1">Auth Page</Text>
+      <Text type="title1">Sign In</Text>
       <SwitchSelect components={COMPONENTS} />
     </AuthContainer>
   );

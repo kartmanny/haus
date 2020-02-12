@@ -1,42 +1,58 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import washington from 'assets/img/washington.svg';
 import outline from 'assets/img/outline.svg';
 
 import Text from 'components/Text';
 import styles from 'components/Footer/footer.module.scss';
 
+const FooterWrapper = styled.footer`
+  display: grid;
+  min-height: 20rem;
+  grid-template-columns: 25rem 1fr 25rem;
+  grid-column-gap: 15rem;
+  background-color: var(--seed-color-primary);
+  flex-direction: column;
+  color: var(--seed-white);
+  place-items: center;
+  padding: 4rem;
+  margin-top: auto;
+  grid-template-areas: '. footer';
+`;
+
+const FooterContainer = styled.div`
+  grid-area: footer;
+`;
+
+const SpaceNeedle = styled.img`
+  height: 350px;
+  margin-left: auto;
+  margin-right: 3rem;
+`;
+
+const SeattleOutline = styled.img`
+  margin-left: auto;
+  margin-right: 3rem;
+  height: 350px;
+`;
+
+const FOOTER_TEXT = `Your home's location is super important. There's no need to have tons of tabs open just to compare various listings and neighborhoods when you're trying to find your dream home. With Haüs, you'll be able to find the perfect neighborhood for your home – give it a try! Search up a city and we'll do the rest.`;
+
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <img
-        height={350}
-        src={washington}
-        style={{ marginLeft: 'auto', marginRight: '3rem' }}
-        alt="Space Needle"
-      />
-      <div className={styles.footerContainer}>
+    <FooterWrapper>
+      <SpaceNeedle src={washington} alt="Space Needle" />
+      <FooterContainer>
         <Text type="title1" className={styles.footerTitle}>
           Haüs
         </Text>
         <Text type="large" className={styles.footerText}>
-          Your home's location is super important. There's no need to have tons
-          of tabs open just to compare various listings and neighborhoods when
-          you're trying to find your dream home. With Haüs, you'll be able to
-          find the perfect neighborhood for your home – give it a try! Search up
-          a city and we'll do the rest.
+          {FOOTER_TEXT}
         </Text>
-      </div>
-      <img
-        height={350}
-        src={outline}
-        style={{
-          marginLeft: 'auto',
-          marginRight: '3rem',
-          border: '0 solid black'
-        }}
-        alt="Space Needle"
-      />
-    </footer>
+      </FooterContainer>
+      <SeattleOutline src={outline} alt="Seattle" />
+    </FooterWrapper>
   );
 };
 

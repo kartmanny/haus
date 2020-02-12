@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Text from 'components/Text/Text';
 import Input from 'components/Input';
-import styles from 'components/Auth/Login/login.module.scss';
+import styles from 'components/Form/form.module.scss';
 
 const Container = styled.div`
   padding: 2rem 5rem;
@@ -25,19 +25,22 @@ const SubmitButton = styled.button`
   outline: none;
 `;
 
-const LoginForm = () => {
+const Form = ({ name, cta, inputs }) => {
   return (
     <Container>
-      <Text type="title3">Login</Text>
-      <Input name="username" type="text" />
-      <Input name="password" type="password" />
+      <Text type="title3" className={styles.marginBottom}>
+        {name}
+      </Text>
+      {inputs.map(({ name, type }, index) => (
+        <Input key={index} name={name} type={type} />
+      ))}
       <SubmitButton>
         <Text type="large" className={styles.loginButton}>
-          Log In
+          {cta}
         </Text>
       </SubmitButton>
     </Container>
   );
 };
 
-export default LoginForm;
+export default Form;

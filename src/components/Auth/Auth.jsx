@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Login from 'components/Auth/Login';
-import Register from 'components/Auth/Register';
+import Form from 'components/Form';
 import Text from 'components/Text/Text';
 import SwitchSelect from 'components/SwitchSelect';
 
@@ -11,16 +10,41 @@ const AuthContainer = styled.div`
   padding: 4rem 8rem 8rem 8rem;
 `;
 
-const COMPONENTS = [
-  { name: 'Login', component: <Login /> },
-  { name: 'Register', component: <Register /> }
+const FORMS = [
+  {
+    name: 'Login',
+    component: (
+      <Form
+        name="Login"
+        cta="Log In"
+        inputs={[
+          { name: 'username', type: 'text' },
+          { name: 'password', type: 'password' }
+        ]}
+      />
+    )
+  },
+  {
+    name: 'Register',
+    component: (
+      <Form
+        name="Register"
+        cta="Register"
+        inputs={[
+          { name: 'email', type: 'email' },
+          { name: 'username', type: 'text' },
+          { name: 'password', type: 'password' }
+        ]}
+      />
+    )
+  }
 ];
 
 const AuthPage = () => {
   return (
     <AuthContainer>
       <Text type="title1">Sign In</Text>
-      <SwitchSelect components={COMPONENTS} />
+      <SwitchSelect components={FORMS} />
     </AuthContainer>
   );
 };

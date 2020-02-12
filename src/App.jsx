@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import Discover from './components/Discover/Discover';
-import Footer from './components/Footer/Footer';
-import Text from './components/Text/Text';
+import Navbar from 'components/Navbar/Navbar';
+import Hero from 'components/Hero/Hero';
+import Discover from 'components/Discover/Discover';
+import Footer from 'components/Footer/Footer';
+import Auth from 'components/Auth/Auth';
 
-import './assets/styles/app.scss';
+import 'assets/styles/app.scss';
 
 const ROUTES = [
   { name: 'Home', url: 'haus/home', cta: false },
@@ -22,19 +22,7 @@ function App() {
         <Navbar routes={ROUTES} />
         <Switch>
           <Route exact path="/haus/discover" component={() => <Discover />} />
-          <Route
-            exact
-            path="/haus/login"
-            component={() => (
-              <h1
-                style={{
-                  textAlign: 'center'
-                }}
-              >
-                <Text type="title1">Login & Register Page</Text>
-              </h1>
-            )}
-          />
+          <Route exact path="/haus/login" component={() => <Auth />} />
           <Route path="/" component={() => <Hero />} />
         </Switch>
       </BrowserRouter>

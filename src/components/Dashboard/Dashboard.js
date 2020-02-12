@@ -32,7 +32,6 @@ const Dashboard = () => {
                     <div className={styles.dashboardResident}>
                         <Text type="large" className={styles.dashboardCategoryTitle}>Average Median Salary</Text>
                         <div className={styles.dashboardParts}></div>
-
                         <Text type="large" className={styles.dashboardCategoryTitle}>Educational Diversity</Text>
                     </div>
 

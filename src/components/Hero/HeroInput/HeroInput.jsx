@@ -5,7 +5,7 @@ import cx from 'classnames';
 import Text from 'components/Text';
 
 import search from 'assets/img/search.svg';
-import styles from 'components/Hero/hero.module.scss';
+import styles from 'components/Hero/HeroInput/heroinput.module.scss';
 
 const HeroInput = ({ id, placeholder }) => {
   const linkRef = useRef(null);

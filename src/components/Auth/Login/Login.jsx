@@ -20,6 +20,8 @@ const SubmitButton = styled.button`
   background-color: var(--seed-color-primary);
   border-radius: 0.6rem;
   margin-top: 2rem;
+  cursor: pointer;
+  outline: none;
 `;
 
 const LoginForm = () => {

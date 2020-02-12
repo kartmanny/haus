@@ -6,10 +6,22 @@
   border-bottom: 2px solid var(--seed-border-light);
   outline: none;
   width: 100%;
+  padding: 5px 0;
+  &.active {
+    border-bottom-color: var(--seed-color-primary);
+  }
 }
 
 .label {
   position: absolute;
   bottom: 5px;
+  transition: 0.2s;
   left: 0;
+  &.active {
+    transform: translateY(-30px);
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
 }

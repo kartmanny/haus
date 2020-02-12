@@ -1,0 +1,15 @@
+.input {
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  color: var(--seed-text-body);
+  border: 0;
+  border-bottom: 2px solid var(--seed-border-light);
+  outline: none;
+  width: 100%;
+}
+
+.label {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+}

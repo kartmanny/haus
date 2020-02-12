@@ -1,14 +1,17 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 
+const ATTRIBUTES = [
+    {backgroundColor: ['#c6D4ff', '#ff5a5f', '#fcbc5e', '#f4866b', '#58c8ce'], labels: ['Master\'s degree or higher', 'Bachelor\'s degree', 'Some college or associate\'s degree', 'High school diploma or equivalent', 'Less than high school diploma']},
+    {backgroundColor: ['#c6D4ff', '#ff5a5f'], labels: ['Rented', 'Owned']},
+]
 
-
-const PieChart = ({pieData}) => {
+const PieChart = ({pieData, type}) => {
     const state = {
-        labels: ['Master\'s degree or higher', 'Bachelor\'s degree', 'Some college or associate\'s degree', 'High school diploma or equivalent', 'Less than high school diploma'],
+        labels: ATTRIBUTES[type].labels,
         datasets: [
             {
-                backgroundColor: ['#c6D4ff', '#ff5a5f', '#fcbc5e', '#f4866b', '#58c8ce'],
+                backgroundColor: ATTRIBUTES[type].backgroundColor,
                 data: pieData
             },
     

@@ -33,7 +33,6 @@ const Input = ({ name, type, ...otherProps }) => {
         onFocus={() => setActive(true)}
         onChange={e => {
           setValue(e.target.value);
-          console.log(value);
         }}
         onBlur={() => setActive(false)}
         id={name}

@@ -2,15 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Text from 'components/Text/Text';
+import Input from 'components/Input';
 import styles from 'components/Auth/Login/login.module.scss';
 
 const Container = styled.div`
-  padding: 2rem;
+  padding: 2rem 5rem;
   border: 2px solid var(--seed-border-light);
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  min-width: 40rem;
+  min-width: 30rem;
 `;
 
 const SubmitButton = styled.button`
@@ -28,8 +29,8 @@ const LoginForm = () => {
   return (
     <Container>
       <Text type="title3">Login</Text>
-      <input type="text" placeholder="username" />
-      <input type="text" placeholder="password" />
+      <Input name="username" type="text" />
+      <Input name="password" type="password" />
       <SubmitButton>
         <Text type="large" className={styles.loginButton}>
           Log In

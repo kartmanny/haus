@@ -1,32 +1,44 @@
 import React from 'react';
-import cx from 'classnames';
 import { Link } from 'react-router-dom';
+import cx from 'classnames';
+import styled from 'styled-components';
 
 import Text from 'components/Text';
+import NavItem from 'components/Navbar/NavItem';
 import styles from 'components/Navbar/navbar.module.scss';
 
+const Nav = styled.nav`
+  margin: 2rem;
+`;
+
+const NavItemList = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`;
+
 const Navbar = ({ routes }) => (
-  <nav className={styles.navbar}>
-    <ul className={styles.navItemList}>
-      <Link className={styles.logoContainer} to="/">
-        <div className={styles.logo}>
-          <span className={styles.logoCenter}></span>
-        </div>
-        <Text type="title2" className={styles.logoText}>
-          Haüs
-        </Text>
-      </Link>
-      {routes.map((route, index) => (
-        <Link
-          key={index}
-          to={`/${route.url}`}
-          className={cx(route.cta && styles.ctaLink, styles.navItem)}
-        >
-          <Text type="large">{route.name}</Text>
-        </Link>
+  <Nav>
+    <NavItemList>
+      <Logo />
+      {routes.map(({ url, name, cta }, index) => (
+        <NavItem key={index} url={url} cta={cta} name={name} />
       ))}
-    </ul>
-  </nav>
+    </NavItemList>
+  </Nav>
+);
+
+const Logo = () => (
+  <Link className={styles.logoContainer} to="/">
+    <div className={styles.logo}>
+      <span className={styles.logoCenter}></span>
+    </div>
+    <Text type="title2" className={styles.logoText}>
+      Haüs
+    </Text>
+  </Link>
 );
 
 export default Navbar;

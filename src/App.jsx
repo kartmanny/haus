@@ -10,9 +10,9 @@ import Auth from 'components/Auth';
 import 'assets/styles/app.scss';
 
 const ROUTES = [
-  { name: 'Home', url: 'haus/home', cta: false },
-  { name: 'Discover', url: 'haus/discover', cta: false },
-  { name: 'Login', url: 'haus/login', cta: true }
+  { name: 'Home', url: '/haus/home', cta: false },
+  { name: 'Discover', url: '/haus/discover', cta: false },
+  { name: 'Login', url: '/haus/login', cta: true }
 ];
 
 function App() {

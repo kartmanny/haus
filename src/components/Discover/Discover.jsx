@@ -7,13 +7,7 @@ import Text from 'components/Text';
 import Map from 'components/Map';
 
 import data from 'assets/data/data.json';
-
-const {
-  info: dashboardTitle,
-  report: reportCard,
-  chartData: _data,
-  listings
-} = data.dashboard;
+const { info, report, chartData, listings } = data.dashboard;
 
 const DiscoverGrid = styled.div`
   display: grid;
@@ -38,9 +32,9 @@ const Discover = () => {
           setView(
             <Dashboard
               onClose={() => setView(<Listings listings={listings} />)}
-              dashboardTitle={dashboardTitle}
-              reportCard={reportCard}
-              data={_data}
+              dashboardTitle={info}
+              reportCard={report}
+              data={chartData}
             />
           )
         }

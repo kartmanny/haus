@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import logo from 'assets/img/logo.svg';
 import HeroInput from 'components/Hero/HeroInput';
 import Text from 'components/Text';
 import styles from 'components/Hero/hero.module.scss';
@@ -21,11 +22,19 @@ const HeroDiv = styled.div`
   text-align: center;
 `;
 
+const HeroTitleLogo = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const Hero = () => {
   return (
     <HeroContainer>
       <HeroDiv>
-        <h1 className={styles.heroTitle}>Haüs</h1>
+        <HeroTitleLogo>
+          <img height={150} src={logo} alt="" />
+          <h1 className={styles.heroTitle}>Haüs</h1>
+        </HeroTitleLogo>
         <Text type="title3" className={styles.heroSubtitle}>
           We'll help you find the perfect neighborhood.
         </Text>

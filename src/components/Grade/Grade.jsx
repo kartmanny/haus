@@ -14,7 +14,7 @@ const Circle = styled.span`
   width: 4rem;
   background-color: var(--seed-color-primary);
   text-align: center;
-  margin: 0 1rem;
+  margin: 0.25rem 1rem;
 `;
 
 const Grade = ({ value, offset = false }) => (

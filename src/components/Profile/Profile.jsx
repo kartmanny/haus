@@ -55,8 +55,8 @@ const ProfileComponent = () => (
     <Text type="title1">Welcome, Kart</Text>
     <ProfileGrid>
       <ProfileGridCell>
-        <Text type="title2">Seattle</Text>
-        <Map />
+        <Text type="title2">Favorites Map</Text>
+        <Map profile={true} />
       </ProfileGridCell>
       <ProfileGridCell>
         <Text type="title2">Favorited Neighborhoods</Text>

@@ -1,4 +1,5 @@
 import React from 'react';
+import cx from 'classnames';
 
 //import DiscoverListings from './DiscoverListings';
 import Dashboard from '../Dashboard/Dashboard';
@@ -22,7 +23,7 @@ const Discover = () => {
   );
 };
 
-const Map = ({ onClick }) => (
+const Map = ({ onClick, profile = false }) => (
   <svg
     version="1.1"
     x="0px"
@@ -222,7 +223,7 @@ const Map = ({ onClick }) => (
       "
       />
       <path
-        className={styles.st2}
+        className={cx(styles.st2, profile && styles.active)}
         d="M134.8,184.4c0,0,4.4,2.5,5.1,3.2s6.8,13.7,7.1,15.4s0.4,18.2,0.4,18.2h-6.3l1-14.9c0,0-4.4-7.7-4.9-14.6
       s-0.4-5.2-0.4-5.2L134.8,184.4z"
       />
@@ -268,7 +269,7 @@ const Map = ({ onClick }) => (
       v-15.4l1.3-1.4L194.6,209.5z"
       />
       <path
-        className={styles.st2}
+        className={cx(styles.st2, profile && styles.active)}
         d="M199.9,240.4l-7.2-0.3l-17,11.3v22.1l3.6,3.9l21,41.8c0,0-0.2-3.1-1.5-6.7s-2.5-2.9-1.8-5.7s0.5-2.9,0.8-6.2
       s0.8-5.2,0.6-8.3s-0.5-4.8-0.1-8.2s1.8-12.1,1.4-15.6s-1.3-7.1-0.6-9.8s1.8-2.1,1.2-6.1S199.9,240.4,199.9,240.4z"
       />
@@ -484,7 +485,7 @@ const Map = ({ onClick }) => (
       l-0.2-4.8c0,0-18-0.1-18.5,0.6s-1.8,1.2-1.8,1.2s-0.2,1.1-1.3-0.2c-1.1-1.3-1.1-1.3-1.1-1.3L222.1,129.9z"
       />
       <path
-        className={styles.st2}
+        className={cx(styles.st2, profile && styles.active)}
         d="M207.2,158.4v5.2l3.1,1c0,0,0.1-0.2,0,0.7c-0.1,0.9-1,0.2-1.1,2.8c-0.1,2.7,0,3.2,0,3.2s-3.3,0.8-4.4,1.8
       c-1.1,1-3.4,2.2-4.2,5.6c-0.8,3.3-3.1,4.5-3.1,4.5s-4.4,1.9-5.6,1.7c-1.2-0.2-11.4-2.7-11.4-2.7s-3.5-2.1-4.1-3.3
       c-0.6-1.2-5.5-6.5-6.7-6.5s-1.2,0-1.2,0s-0.8-26.9,0.3-32.5c1.1-5.6,1.1-5.6,1.1-5.6s3.4,4,5.5,4.2s3.5,0.6,3.5,0.6l2.2-2.2
@@ -538,6 +539,7 @@ const Map = ({ onClick }) => (
       <rect
         x="126.3"
         y="20.4"
+        data-name="hello"
         className={styles.st2}
         width="12.7"
         height="51.5"

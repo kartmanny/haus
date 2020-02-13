@@ -12,7 +12,6 @@ const dashboardTitle = {
   population: '2,000',
   overall: 'A+'
 };
-
 const reportCard = [
   { name: 'Median Home Value', score: 'A+', type: 'A' },
   { name: 'Average Rent', score: 'B+', type: 'B' },
@@ -81,16 +80,14 @@ const LISTINGS = [
 const Discover = () => {
   return (
     <DiscoverGrid>
-      <DiscoverContainer>
-        <Text type="title1">Seattle</Text>
-        <Map />
-      </DiscoverContainer>
+      <Text type="title1">Seattle</Text>
+      <Text type="title1">Neighborhoods</Text>
+      <Map />
       <Dashboard
         dashboardTitle={dashboardTitle}
         reportCard={reportCard}
         data={_data}
       ></Dashboard>
-      <Listings listings={LISTINGS} />
     </DiscoverGrid>
   );
 };

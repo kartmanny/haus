@@ -22,28 +22,24 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
           <Text type="title1">{dashboardTitle.name}</Text>
           <Text type="small">
             Median Price: ${dashboardTitle.price} &nbsp; &bull; &nbsp;
-            Population: {dashboardTitle.population}{' '}
+            Population: {dashboardTitle.population}
           </Text>
         </div>
-
         <Link className={styles.plus}>
           <img className={styles.add} src={add} height={35} alt="add" />
         </Link>
       </div>
       <div className={styles.dashboardContainer}>
         <Text type="title3">
-          {' '}
-          Overall Haüs Score:{' '}
+          Overall Haüs Score:
           <span className={styles.dashboardScore}>
-            {' '}
-            {dashboardTitle.overall}{' '}
-          </span>{' '}
+            {dashboardTitle.overall}
+          </span>
         </Text>
         <div className={styles.dashboardReportCard}>
           {reportCard.map(({ name, score, type }) => (
             <Text type="regular">
-              {' '}
-              <Grade type={type}>{score}</Grade> {name}{' '}
+              <Grade type={type}>{score}</Grade> {name}
             </Text>
           ))}
         </div>
@@ -83,28 +79,13 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
           </Text>
           {SCHOOLS.map(({ name, rank }) => (
             <Text type="regular">
-              {' '}
-              <Grade type="A">#{rank}</Grade> {name}{' '}
+              <Grade type="A">#{rank}</Grade> {name}
             </Text>
           ))}
           <Text type="large" className={styles.dashboardCategoryTitle}>
             Crime and Safety
           </Text>
           <DoubleBarChart barData={data.crimeData}></DoubleBarChart>
-        </div>
-
-        <div className={styles.dashboardStats}>
-          <Text type="title2" className={styles.dashboardCategoryTitle}>
-            About the Residents
-          </Text>
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Average Median Salary
-          </Text>
-          <BarChart barData={data.barData} type="0"></BarChart>
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Educational Diversity
-          </Text>
-          <PieChart pieData={data.pieData} type="0"></PieChart>
         </div>
       </div>
     </div>

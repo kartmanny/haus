@@ -21,23 +21,43 @@ const DiscoverContainer = styled.div`
 const LISTINGS = [
   {
     name: 'Queen Anne',
-    scores: [{ score: 97 }, { population: 3500 }, { schools: 'A+' }]
+    scores: [
+      { name: 'score', value: 97 },
+      { name: 'population', value: 3500 },
+      { name: 'schools', value: 'A+' }
+    ]
   },
   {
     name: 'West Queen Anne',
-    scores: [{ score: 95 }, { population: 4000 }, { schools: 'A-' }]
+    scores: [
+      { name: 'score', value: 95 },
+      { name: 'population', value: 4000 },
+      { name: 'schools', value: 'A-' }
+    ]
   },
   {
     name: 'South Lake Union',
-    scores: [{ score: 85 }, { population: 3750 }, { schools: 'A-' }]
+    scores: [
+      { name: 'score', value: 85 },
+      { name: 'population', value: 3750 },
+      { name: 'schools', value: 'A-' }
+    ]
   },
   {
     name: 'Westlake',
-    scores: [{ score: 78 }, { population: 1500 }, { schools: 'B+' }]
+    scores: [
+      { name: 'score', value: 78 },
+      { name: 'population', value: 1500 },
+      { name: 'schools', value: 'B+' }
+    ]
   },
   {
     name: 'Capitol Hill',
-    scores: [{ score: 75 }, { population: 2500 }, { schools: 'A+' }]
+    scores: [
+      { name: 'score', value: 75 },
+      { name: 'population', value: 2500 },
+      { name: 'schools', value: 'A+' }
+    ]
   }
 ];
 

@@ -23,7 +23,7 @@ const Input = ({ name, type, ...otherProps }) => {
         className={cx(styles.label, (active || !!value) && styles.active)}
         htmlFor={name}
       >
-        <Text type="large" className={styles.capitalize}>
+        <Text type="large" capitalize={true}>
           {name}
         </Text>
       </label>

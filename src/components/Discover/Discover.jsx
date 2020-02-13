@@ -25,49 +25,57 @@ const _data = {
 }
 const DiscoverGrid = styled.div`
   display: grid;
+  padding: 2rem 2rem 4rem;
+  max-width: 1360px;
+  margin: auto;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 10fr;
   align-items: center;
+  justify-items: center;
 `;
-
-const DiscoverContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
 const LISTINGS = [
   {
     name: 'Queen Anne',
-    scores: [{ score: 97 }, { population: 3500 }, { schools: 'A+' }]
+    scores: [
+      { name: 'score', value: 'A+' },
+      { name: 'schools', value: 'A' },
+      { name: 'population', value: 'A-' }
+    ]
   },
   {
     name: 'West Queen Anne',
-    scores: [{ score: 95 }, { population: 4000 }, { schools: 'A-' }]
+    scores: [
+      { name: 'score', value: 'B+' },
+      { name: 'schools', value: 'B' },
+      { name: 'population', value: 'B-' }
+    ]
   },
   {
     name: 'South Lake Union',
-    scores: [{ score: 85 }, { population: 3750 }, { schools: 'A-' }]
+    scores: [
+      { name: 'score', value: 'C+' },
+      { name: 'schools', value: 'C' },
+      { name: 'population', value: 'C-' }
+    ]
   },
   {
     name: 'Westlake',
-    scores: [{ score: 78 }, { population: 1500 }, { schools: 'B+' }]
-  },
-  {
-    name: 'Capitol Hill',
-    scores: [{ score: 75 }, { population: 2500 }, { schools: 'A+' }]
+    scores: [
+      { name: 'score', value: 'D+' },
+      { name: 'schools', value: 'D' },
+      { name: 'population', value: 'D-' }
+    ]
   }
 ];
 
 const Discover = () => {
   return (
     <DiscoverGrid>
-      <DiscoverContainer>
-        <Text type="title1">Seattle</Text>
-        <Map />
-      </DiscoverContainer>
-      <Dashboard dashboardTitle={dashboardTitle} reportCard={reportCard} data={_data}></Dashboard>
+      <Text type="title1">Seattle</Text>
+      <Text type="title1">Neighborhoods</Text>
+      <Map />
       <Listings listings={LISTINGS} />
+      <Dashboard dashboardTitle={dashboardTitle} reportCard={reportCard} data={_data}></Dashboard>
     </DiscoverGrid>
   );
 };

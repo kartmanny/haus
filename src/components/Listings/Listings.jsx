@@ -2,10 +2,10 @@ import React from 'react';
 
 import ListingItem from 'components/Listings/ListingItem';
 
-const Listings = ({ listings }) => (
+const Listings = ({ listings, ...otherProps }) => (
   <div>
     {listings.map(({ name, scores }, index) => (
-      <ListingItem key={index} name={name} scores={scores} />
+      <ListingItem key={index} name={name} scores={scores} {...otherProps} />
     ))}
   </div>
 );

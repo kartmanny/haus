@@ -10,6 +10,7 @@ const Listing = styled.div`
   border-radius: 1rem;
   margin: 1rem auto 1rem 0;
   width: 100%;
+  cursor: pointer;
 `;
 
 const Scores = styled.div`
@@ -18,9 +19,9 @@ const Scores = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
 `;
 
-const ListingItem = ({ name, scores }) => {
+const ListingItem = ({ name, scores, ...otherProps }) => {
   return (
-    <Listing>
+    <Listing {...otherProps}>
       <Text type="title2">{name}</Text>
       <Scores>
         {scores.map(({ name, value }, index) => (

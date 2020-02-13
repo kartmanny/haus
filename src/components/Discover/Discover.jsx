@@ -7,7 +7,7 @@ import Text from 'components/Text';
 import Map from 'components/Map';
 
 import data from 'assets/data/data.json';
-const { info, report, chartData, listings } = data.dashboard;
+const { info, report, chartData, listings: listingData } = data.dashboard;
 
 const DiscoverGrid = styled.div`
   display: grid;
@@ -22,23 +22,23 @@ const DiscoverGrid = styled.div`
 `;
 
 const Discover = () => {
-  const [view, setView] = useState(<Listings listings={listings} />);
+  const listings = (
+    <Listings listings={listingData} onClick={() => setView(dashboard)} />
+  );
+  const dashboard = (
+    <Dashboard
+      onClose={() => setView(listings)}
+      dashboardTitle={info}
+      reportCard={report}
+      data={chartData}
+    />
+  );
+  const [view, setView] = useState(listings);
   return (
     <DiscoverGrid>
       <Text type="title1">Seattle</Text>
       <Text type="title1">Neighborhoods</Text>
-      <Map
-        onClick={() =>
-          setView(
-            <Dashboard
-              onClose={() => setView(<Listings listings={listings} />)}
-              dashboardTitle={info}
-              reportCard={report}
-              data={chartData}
-            />
-          )
-        }
-      />
+      <Map onClick={() => setView(dashboard)} />
       {view}
     </DiscoverGrid>
   );

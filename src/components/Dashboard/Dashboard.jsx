@@ -14,7 +14,7 @@ const SCHOOLS = [
   { name: 'Cleveland High School', rank: '92' },
   { name: 'Center School', rank: '74' }
 ];
-const Dashboard = ({ dashboardTitle, reportCard, data }) => {
+const Dashboard = ({ dashboardTitle, reportCard, data, onClose }) => {
   return (
     <div className={styles.dashboard}>
       <div className={styles.dashboardNav}>
@@ -25,9 +25,9 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
             Population: {dashboardTitle.population}
           </Text>
         </div>
-        <Link className={styles.plus}>
-          <img className={styles.add} src={add} height={35} alt="add" />
-        </Link>
+        <Text type="regular" className={styles.add} onClick={onClose}>
+          X
+        </Text>
       </div>
       <div className={styles.dashboardContainer}>
         <Text type="title3" className={styles.dashboardScore}>

@@ -5,9 +5,16 @@ import styles from 'components/Text/text.module.scss';
 /*
  * @param type   "title1" | "title2" | "title3" | "large" | "regular" | "small"
  */
-const Text = ({ type, children, className, capitalize = false }) => {
+const Text = ({
+  type,
+  children,
+  className,
+  capitalize = false,
+  ...otherProps
+}) => {
   return (
     <span
+      {...otherProps}
       className={cx(className, styles[type], capitalize && styles.capitalize)}
     >
       {children}

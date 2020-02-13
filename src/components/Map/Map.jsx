@@ -22,7 +22,7 @@ const Discover = () => {
   );
 };
 
-const Map = () => (
+const Map = ({ onClick }) => (
   <svg
     version="1.1"
     x="0px"
@@ -30,6 +30,7 @@ const Map = () => (
     viewBox="0 0 300 500"
     className={styles.svg}
     style={{ enableBackground: 'new 0 0 300 500' }}
+    onClick={onClick}
   >
     <g id="Layer_1" className={styles.st0}>
       <g className={styles.st1}>

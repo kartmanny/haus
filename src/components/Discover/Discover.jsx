@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
-// import Listings from 'components/Listings';
+import Listings from 'components/Listings';
 import Dashboard from 'components/Dashboard';
 import Text from 'components/Text';
 import Map from 'components/Map';
@@ -44,52 +44,60 @@ const DiscoverGrid = styled.div`
   justify-items: center;
 `;
 
-// const LISTINGS = [
-//   {
-//     name: 'Queen Anne',
-//     scores: [
-//       { name: 'score', value: 'A+' },
-//       { name: 'schools', value: 'A' },
-//       { name: 'population', value: 'A-' }
-//     ]
-//   },
-//   {
-//     name: 'West Queen Anne',
-//     scores: [
-//       { name: 'score', value: 'B+' },
-//       { name: 'schools', value: 'B' },
-//       { name: 'population', value: 'B-' }
-//     ]
-//   },
-//   {
-//     name: 'South Lake Union',
-//     scores: [
-//       { name: 'score', value: 'C+' },
-//       { name: 'schools', value: 'C' },
-//       { name: 'population', value: 'C-' }
-//     ]
-//   },
-//   {
-//     name: 'Westlake',
-//     scores: [
-//       { name: 'score', value: 'D+' },
-//       { name: 'schools', value: 'D' },
-//       { name: 'population', value: 'D-' }
-//     ]
-//   }
-// ];
+const LISTINGS = [
+  {
+    name: 'Queen Anne',
+    scores: [
+      { name: 'score', value: 'A+' },
+      { name: 'schools', value: 'A' },
+      { name: 'population', value: 'A-' }
+    ]
+  },
+  {
+    name: 'West Queen Anne',
+    scores: [
+      { name: 'score', value: 'B+' },
+      { name: 'schools', value: 'B' },
+      { name: 'population', value: 'B-' }
+    ]
+  },
+  {
+    name: 'South Lake Union',
+    scores: [
+      { name: 'score', value: 'C+' },
+      { name: 'schools', value: 'C' },
+      { name: 'population', value: 'C-' }
+    ]
+  },
+  {
+    name: 'Westlake',
+    scores: [
+      { name: 'score', value: 'D+' },
+      { name: 'schools', value: 'D' },
+      { name: 'population', value: 'D-' }
+    ]
+  }
+];
 
 const Discover = () => {
+  const [view, setView] = useState(<Listings listings={LISTINGS} />);
   return (
     <DiscoverGrid>
       <Text type="title1">Seattle</Text>
       <Text type="title1">Neighborhoods</Text>
-      <Map />
-      <Dashboard
-        dashboardTitle={dashboardTitle}
-        reportCard={reportCard}
-        data={_data}
-      ></Dashboard>
+      <Map
+        onClick={() =>
+          setView(
+            <Dashboard
+              onClose={() => setView(<Listings listings={LISTINGS} />)}
+              dashboardTitle={dashboardTitle}
+              reportCard={reportCard}
+              data={_data}
+            />
+          )
+        }
+      />
+      {view}
     </DiscoverGrid>
   );
 };

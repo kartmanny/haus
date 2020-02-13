@@ -22,7 +22,7 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
           <Text type="title1">{dashboardTitle.name}</Text>
           <Text type="small">
             Median Price: ${dashboardTitle.price} &nbsp; &bull; &nbsp;
-            Population: {dashboardTitle.population}{' '}
+            Population: {dashboardTitle.population}
           </Text>
         </div>
 
@@ -31,13 +31,12 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
         </Link>
       </div>
       <div className={styles.dashboardContainer}>
-        <Text type="title3">
-          {' '}
-          Overall Haüs Score:{' '}
-          <span className={styles.dashboardScore}>
-            {' '}
-            {dashboardTitle.overall}{' '}
-          </span>{' '}
+        <Text type="title3" className={styles.dashboardScore}>
+          Overall Haüs Score:
+          <Grade
+            value={dashboardTitle.overall}
+            classNames={styles.dashboardScore}
+          />
         </Text>
         <div className={styles.dashboardReportCard}>
           {reportCard.map(({ name, score, type }) => (

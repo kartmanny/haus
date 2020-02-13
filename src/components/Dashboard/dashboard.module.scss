@@ -6,7 +6,7 @@
 .dashboardContainer {
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 80rem;
+  height: 70rem;
 }
 
 .dashboardNav {
@@ -31,13 +31,7 @@
   display: grid;
 }
 .dashboardScore {
-  display: inline-flex;
-  background-color: var(--seed-color-primary);
-  border-radius: 50%;
-  padding: 10px;
-  text-align: center;
-  margin: 8px;
-  color: #ffeaea;
+  margin: 2rem 0;
 }
 
 .dashboardStats {

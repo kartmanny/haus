@@ -43,7 +43,7 @@ const FORMS = [
 const AuthPage = () => {
   return (
     <AuthContainer>
-      <Text type="title1">Sign In</Text>
+      <Text type="title1">Log In or Register</Text>
       <SwitchSelect components={FORMS} />
     </AuthContainer>
   );

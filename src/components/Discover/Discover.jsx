@@ -7,56 +7,45 @@ import Map from 'components/Map';
 
 const DiscoverGrid = styled.div`
   display: grid;
+  padding: 2rem 2rem 4rem;
+  max-width: 1360px;
+  margin: auto;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 10fr;
   align-items: center;
+  justify-items: center;
 `;
-
-const DiscoverContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
 const LISTINGS = [
   {
     name: 'Queen Anne',
     scores: [
-      { name: 'score', value: 97 },
-      { name: 'population', value: 3500 },
-      { name: 'schools', value: 'A+' }
+      { name: 'score', value: 'A+' },
+      { name: 'schools', value: 'A' },
+      { name: 'population', value: 'A-' }
     ]
   },
   {
     name: 'West Queen Anne',
     scores: [
-      { name: 'score', value: 95 },
-      { name: 'population', value: 4000 },
-      { name: 'schools', value: 'A-' }
+      { name: 'score', value: 'B+' },
+      { name: 'schools', value: 'B' },
+      { name: 'population', value: 'B-' }
     ]
   },
   {
     name: 'South Lake Union',
     scores: [
-      { name: 'score', value: 85 },
-      { name: 'population', value: 3750 },
-      { name: 'schools', value: 'A-' }
+      { name: 'score', value: 'C+' },
+      { name: 'schools', value: 'C' },
+      { name: 'population', value: 'C-' }
     ]
   },
   {
     name: 'Westlake',
     scores: [
-      { name: 'score', value: 78 },
-      { name: 'population', value: 1500 },
-      { name: 'schools', value: 'B+' }
-    ]
-  },
-  {
-    name: 'Capitol Hill',
-    scores: [
-      { name: 'score', value: 75 },
-      { name: 'population', value: 2500 },
-      { name: 'schools', value: 'A+' }
+      { name: 'score', value: 'D+' },
+      { name: 'schools', value: 'D' },
+      { name: 'population', value: 'D-' }
     ]
   }
 ];
@@ -64,10 +53,9 @@ const LISTINGS = [
 const Discover = () => {
   return (
     <DiscoverGrid>
-      <DiscoverContainer>
-        <Text type="title1">Seattle</Text>
-        <Map />
-      </DiscoverContainer>
+      <Text type="title1">Seattle</Text>
+      <Text type="title1">Neighborhoods</Text>
+      <Map />
       <Listings listings={LISTINGS} />
     </DiscoverGrid>
   );

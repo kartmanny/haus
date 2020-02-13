@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
+import logo from 'assets/img/logo.svg';
+
 import Text from 'components/Text';
 import NavItem from 'components/Navbar/NavItem';
 import styles from 'components/Navbar/navbar.module.scss';
@@ -31,12 +33,7 @@ const Navbar = ({ routes }) => (
 
 const Logo = () => (
   <Link className={styles.logoContainer} to="/">
-    <div className={styles.logo}>
-      <span className={styles.logoCenter}></span>
-    </div>
-    <Text type="title2" className={styles.logoText}>
-      Haüs
-    </Text>
+    <img height={80} src={logo} alt="Haus logo" />
   </Link>
 );
 

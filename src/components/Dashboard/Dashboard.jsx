@@ -1,13 +1,12 @@
 import React from 'react';
 import Text from 'components/Text';
-import { Link } from 'react-router-dom';
 import Grade from 'components/Grade';
 import styles from './dashboard.module.scss';
 import BarChart from 'components/Dashboard/BarChart';
 import PieChart from 'components/Dashboard/PieChart';
 import LineChart from 'components/Dashboard/LineChart';
 import DoubleBarChart from 'components/Dashboard/DoubleBarChart';
-import add from 'assets/img/plus.svg';
+
 const SCHOOLS = [
   { name: 'Ballard High School', rank: '27' },
   { name: 'Center High School', rank: '1' },

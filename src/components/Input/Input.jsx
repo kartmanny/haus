@@ -37,6 +37,7 @@ const Input = ({ name, type, ...otherProps }) => {
         onBlur={() => setActive(false)}
         id={name}
         name={name}
+        value={value}
         {...otherProps}
       />
     </Container>

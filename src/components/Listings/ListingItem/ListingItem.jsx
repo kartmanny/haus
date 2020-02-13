@@ -23,8 +23,8 @@ const ListingItem = ({ name, scores }) => {
     <Listing>
       <Text type="title2">{name}</Text>
       <Scores>
-        {scores.map(({ name, value }) => (
-          <span>
+        {scores.map(({ name, value }, index) => (
+          <span key={index}>
             <Text type="large" capitalize={true}>
               {name}:
             </Text>

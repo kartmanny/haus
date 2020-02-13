@@ -5,7 +5,7 @@ import Text from 'components/Text/Text';
 import Input from 'components/Input';
 import styles from 'components/Form/form.module.scss';
 
-const Container = styled.div`
+const FormContainer = styled.form`
   padding: 2rem 5rem;
   border: 2px solid var(--seed-border-light);
   border-radius: 1rem;
@@ -25,9 +25,19 @@ const SubmitButton = styled.button`
   outline: none;
 `;
 
-const Form = ({ name, cta, inputs }) => {
+const Form = ({ name, cta, inputs, onSubmit = () => 1 }) => {
+  const onSubmitHandler = e => {
+    e.preventDefault();
+    const inputs = Array.from(e.target.getElementsByTagName('input'));
+    const formData = {};
+    inputs.forEach(input => {
+      const { name, value } = input;
+      formData[name] = value;
+    });
+    onSubmit(formData);
+  };
   return (
-    <Container>
+    <FormContainer action="#" onSubmit={onSubmitHandler}>
       <Text type="title3" className={styles.marginBottom}>
         {name}
       </Text>
@@ -39,7 +49,7 @@ const Form = ({ name, cta, inputs }) => {
           {cta}
         </Text>
       </SubmitButton>
-    </Container>
+    </FormContainer>
   );
 };
 

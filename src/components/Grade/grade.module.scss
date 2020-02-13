@@ -1,25 +1,3 @@
-.A { 
-    background-color: var(--seed-color-primary);
-}
-
-.B { 
-    background-color: #da5156;
-}
-.C {
-    background-color: #9e3c40;
-}
-
-.D, .F { 
-    background-color: #612527;
-}
-.A, .B, .C, .D, .F { 
-    width: 25px;
-    text-align: center;
-    border-radius: 50%;
-    padding: 10px;  
-    margin: 8px;
-    color: #ffeaea;
-}
 .offset {
   transform: translateX(2px);
 }

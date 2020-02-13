@@ -1,7 +1,7 @@
 import React from 'react';
-import Text from '../Text/Text';
+import Text from 'components/Text';
 import { Link } from 'react-router-dom';
-import Grade from '../Grade/Grade';
+import Grade from 'components/Grade';
 import styles from './dashboard.module.scss';
 import BarChart from 'components/Dashboard/BarChart';
 import PieChart from 'components/Dashboard/PieChart';
@@ -42,8 +42,8 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
         <div className={styles.dashboardReportCard}>
           {reportCard.map(({ name, score, type }) => (
             <Text type="regular">
-              {' '}
-              <Grade type={type}>{score}</Grade> {name}{' '}
+              <Grade value={type} />
+              {name}
             </Text>
           ))}
         </div>
@@ -83,8 +83,8 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
           </Text>
           {SCHOOLS.map(({ name, rank }) => (
             <Text type="regular">
-              {' '}
-              <Grade type="A">#{rank}</Grade> {name}{' '}
+              <Grade value={`#${rank}`} offset={false} />
+              {name}
             </Text>
           ))}
           <Text type="large" className={styles.dashboardCategoryTitle}>

@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 import logo from 'assets/img/logo.svg';
 
-import Text from 'components/Text';
 import NavItem from 'components/Navbar/NavItem';
 import styles from 'components/Navbar/navbar.module.scss';
 

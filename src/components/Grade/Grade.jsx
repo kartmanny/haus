@@ -17,9 +17,14 @@ const Circle = styled.span`
   margin: 0 1rem;
 `;
 
-const Grade = ({ value }) => (
+const Grade = ({ value, offset = false }) => (
   <Circle>
-    <span className={cx(styles.gradeText, value.length > 1 && styles.offset)}>
+    <span
+      className={cx(
+        styles.gradeText,
+        value.length > 1 && offset && styles.offset
+      )}
+    >
       {value}
     </span>
   </Circle>

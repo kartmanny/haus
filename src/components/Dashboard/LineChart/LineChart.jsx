@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 
 const LineChart = ({ lineData }) => {
-  const state = {
+  const config = {
     labels: ['1990', '1995', '2000', '2005', '2010', '2015', '2020'],
     datasets: [
       {
@@ -17,7 +17,7 @@ const LineChart = ({ lineData }) => {
   return (
     <div>
       <Line
-        data={state}
+        data={config}
         options={{
           responsive: true,
           maintainAspectRatio: true,

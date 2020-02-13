@@ -2,7 +2,7 @@ import React from 'react';
 import { HorizontalBar } from 'react-chartjs-2';
 
 const DoubleBarChart = ({ barData }) => {
-  const state = {
+  const config = {
     labels: ['Violent Crimes', 'Property Crimes'],
     datasets: [
       {
@@ -20,7 +20,7 @@ const DoubleBarChart = ({ barData }) => {
   return (
     <div>
       <HorizontalBar
-        data={state}
+        data={config}
         options={{
           responsive: true,
           maintainAspectRatio: true,

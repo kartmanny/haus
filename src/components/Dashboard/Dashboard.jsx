@@ -7,12 +7,9 @@ import PieChart from 'components/Dashboard/PieChart';
 import LineChart from 'components/Dashboard/LineChart';
 import DoubleBarChart from 'components/Dashboard/DoubleBarChart';
 
-const SCHOOLS = [
-  { name: 'Ballard High School', rank: '27' },
-  { name: 'Center High School', rank: '1' },
-  { name: 'Cleveland High School', rank: '92' },
-  { name: 'Center School', rank: '74' }
-];
+import data from 'assets/data/data.json';
+
+const { schools } = data.dashboard;
 const Dashboard = ({ dashboardTitle, reportCard, data, onClose }) => {
   return (
     <div className={styles.dashboard}>
@@ -37,9 +34,9 @@ const Dashboard = ({ dashboardTitle, reportCard, data, onClose }) => {
           />
         </Text>
         <div className={styles.dashboardReportCard}>
-          {reportCard.map(({ name, score, type }) => (
+          {reportCard.map(({ name, score }) => (
             <Text type="regular">
-              <Grade value={type} />
+              <Grade value={score} />
               {name}
             </Text>
           ))}
@@ -78,7 +75,7 @@ const Dashboard = ({ dashboardTitle, reportCard, data, onClose }) => {
           <Text type="small" className={styles.dashboardCategoryTitle}>
             Top ranked schools in this city's neighborhood
           </Text>
-          {SCHOOLS.map(({ name, rank }) => (
+          {schools.map(({ name, rank }) => (
             <Text type="regular">
               <Grade value={`#${rank}`} offset={false} />
               {name}

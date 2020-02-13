@@ -1,0 +1,69 @@
+{
+  "dashboard": {
+    "info": {
+      "name": "WestLake",
+      "price": "50,000",
+      "population": "2,000",
+      "overall": "A+"
+    },
+    "report": [
+      { "name": "Median Home Value", "score": "A+" },
+      { "name": "Average Rent", "score": "B+" },
+      { "name": "Appreciation Score", "score": "A+" },
+      { "name": "Schools", "score": "C+" },
+      { "name": "Population", "score": "A+" },
+      { "name": "Diversity", "score": "D+" },
+      { "name": "Walk Score", "score": "F+" }
+    ],
+    "schools": [
+      { "name": "Ballard High School", "rank": 27 },
+      { "name": "Center High School", "rank": 1 },
+      { "name": "Cleveland High School", "rank": 92 },
+      { "name": "Center School", "rank": 74 }
+    ],
+    "chartData": {
+      "barData": [79565, 55322],
+      "pieData": [42.2, 26.5, 17.1, 3.2, 11],
+      "lineData": [200000, 250000, 400000, 420000, 500000, 380000, 600000],
+      "crimeData": [
+        [330, 5582],
+        [463, 2784]
+      ],
+      "rentOwned": [53, 47]
+    },
+    "listings": [
+      {
+        "name": "Queen Anne",
+        "scores": [
+          { "name": "score", "value": "A+" },
+          { "name": "schools", "value": "A" },
+          { "name": "population", "value": "A-" }
+        ]
+      },
+      {
+        "name": "West Queen Anne",
+        "scores": [
+          { "name": "score", "value": "B+" },
+          { "name": "schools", "value": "B" },
+          { "name": "population", "value": "B-" }
+        ]
+      },
+      {
+        "name": "South Lake Union",
+        "scores": [
+          { "name": "score", "value": "C+" },
+          { "name": "schools", "value": "C" },
+          { "name": "population", "value": "C-" }
+        ]
+      },
+      {
+        "name": "Westlake",
+        "scores": [
+          { "name": "score", "value": "D+" },
+          { "name": "schools", "value": "D" },
+          { "name": "population", "value": "D-" }
+        ]
+      }
+    ]
+  }
+}

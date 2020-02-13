@@ -2,7 +2,7 @@ import React from 'react';
 import { Pie } from 'react-chartjs-2';
 
 const PieChart = ({ pieData }) => {
-  const state = {
+  const config = {
     labels: [
       "Master's degree or higher",
       "Bachelor's degree",
@@ -26,7 +26,7 @@ const PieChart = ({ pieData }) => {
   return (
     <div>
       <Pie
-        data={state}
+        data={config}
         options={{
           responsive: true,
           maintainAspectRatio: true,

@@ -30,11 +30,12 @@ const Dashboard = ({ dashboardTitle, reportCard, data }) => {
         </Link>
       </div>
       <div className={styles.dashboardContainer}>
-        <Text type="title3">
+        <Text type="title3" className={styles.dashboardScore}>
           Overall Haüs Score:
-          <span className={styles.dashboardScore}>
-            {dashboardTitle.overall}
-          </span>
+          <Grade
+            value={dashboardTitle.overall}
+            classNames={styles.dashboardScore}
+          />
         </Text>
         <div className={styles.dashboardReportCard}>
           {reportCard.map(({ name, score, type }) => (

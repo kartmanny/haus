@@ -1,77 +1,74 @@
-.dashboard { 
-    border-left: #dad8d8 solid 2px;
-    border-radius: 3px;
-    padding-left: 3%;
-    margin: 1%;
+.dashboard {
+  border: 2px solid var(--seed-border-light);
+  padding: 0 2rem;
+  border-radius: 1rem;
 }
 .dashboardContainer {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80rem;
 }
 
-.dashboardNav { 
-    display: flex;
-    justify-content: space-between;
-    --width: 100%;
-    padding: 1%;
+.dashboardNav {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid var(--seed-border-light);
 }
 
-.dashboardReportCard { 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 1rem;
-    border: #dad8d8 solid 1px;
-    border-radius: 3px;
-    padding: 3%;
+.dashboardReportCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  border: #dad8d8 solid 1px;
+  border-radius: 3px;
+  padding: 3%;
 }
 
-.dashboardTitle { 
-    width: 50%;
-    padding-top: 20px;
-    display: grid;
+.dashboardTitle {
+  width: 50%;
+  padding-top: 20px;
+  display: grid;
 }
-.dashboardScore { 
-    display: inline-flex;
-    background-color: var(--seed-color-primary);
-    border-radius: 50%;
-    padding: 10px;  
-    text-align: center;
-    margin: 8px;
-    color: #ffeaea;
-}
-
-.dashboardStats { 
-    display: block;
+.dashboardScore {
+  display: inline-flex;
+  background-color: var(--seed-color-primary);
+  border-radius: 50%;
+  padding: 10px;
+  text-align: center;
+  margin: 8px;
+  color: #ffeaea;
 }
 
-.dashboardCategoryTitle { 
-    width: 100%;
-    padding: 1%;
-    --padding-top: 3%;
+.dashboardStats {
+  display: block;
+}
+
+.dashboardCategoryTitle {
+  width: 100%;
+  padding: 1%;
+  --padding-top: 3%;
 }
 
 .dashboardContainer::-webkit-scrollbar {
-    width: 10px;
-}
-   
-.dashboardContainer::-webkit-scrollbar-thumb {
-    background: rgb(206, 205, 205);
-    border-radius: 20px;
-}
-  
-.dashboardContainer::-webkit-scrollbar-track {
-    background:#f1f1f1;
-    border-radius: 20px;
+  width: 10px;
 }
 
-.plus { 
-    margin: auto 0px;
+.dashboardContainer::-webkit-scrollbar-thumb {
+  background: rgb(206, 205, 205);
+  border-radius: 20px;
+}
+
+.dashboardContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 20px;
+}
+
+.plus {
+  margin: auto 0px;
 }
 .add {
-    display: block;
-    padding: 1rem;
-    cursor: pointer;
-
+  display: block;
+  padding: 1rem;
+  cursor: pointer;
 }
-

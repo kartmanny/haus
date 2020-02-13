@@ -1,7 +1,5 @@
 import React from 'react';
-import { HorizontalBar, defaults } from 'react-chartjs-2';
-
-//defaults.global.defaultFontFamily = 'Brandon';
+import { HorizontalBar } from 'react-chartjs-2';
 
 const DoubleBarChart = ({ barData }) => {
   const state = {

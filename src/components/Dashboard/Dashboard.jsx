@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+
 import Text from 'components/Text';
 import Grade from 'components/Grade';
 import styles from 'components/Dashboard/dashboard.module.scss';
@@ -13,80 +15,115 @@ const { schools } = data.dashboard;
 const Dashboard = ({ dashboardTitle, reportCard, data, onClose }) => {
   return (
     <div className={styles.dashboard}>
-      <div className={styles.dashboardNav}>
-        <div className={styles.dashboardTitle}>
-          <Text type="title1">{dashboardTitle.name}</Text>
-          <Text type="small">
-            Median Price: ${dashboardTitle.price} &nbsp; &bull; &nbsp;
-            Population: {dashboardTitle.population}
-          </Text>
-        </div>
-        <Text type="regular" className={styles.add} onClick={onClose}>
-          X
-        </Text>
-      </div>
+      <DashboardHeading
+        onClose={onClose}
+        name={dashboardTitle.name}
+        population={dashboardTitle.population}
+        price={dashboardTitle.price}
+      />
       <div className={styles.dashboardContainer}>
-        <Text type="title3" className={styles.dashboardScore}>
-          Overall Haüs Score:
-          <Grade
-            value={dashboardTitle.overall}
-            classNames={styles.dashboardScore}
-          />
-        </Text>
-        <div className={styles.dashboardReportCard}>
-          {reportCard.map(({ name, score }) => (
-            <Text type="regular">
-              <Grade value={score} />
-              {name}
-            </Text>
-          ))}
-        </div>
-
-        <div className={styles.dashboardStats}>
-          <Text type="title2" className={styles.dashboardCategoryTitle}>
-            About the Residents
-          </Text>
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Average Median Salary
-          </Text>
-          <BarChart barData={data.barData} type="0"></BarChart>
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Educational Diversity
-          </Text>
-          <PieChart pieData={data.pieData} type="0"></PieChart>
-
-          <Text type="title2" className={styles.dashboardCategoryTitle}>
-            About the Homes
-          </Text>
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Appreciation
-          </Text>
-          <LineChart lineData={data.lineData}></LineChart>
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Rent vs. Owned Households
-          </Text>
-          <PieChart pieData={data.rentOwned} type="1"></PieChart>
-          <Text type="title2" className={styles.dashboardCategoryTitle}>
-            About the Neighborhood
-          </Text>
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Schools
-          </Text>
-          <Text type="small" className={styles.dashboardCategoryTitle}>
-            Top ranked schools in this city's neighborhood
-          </Text>
-          {schools.map(({ name, rank }) => (
-            <Text type="regular">
-              <Grade value={`#${rank}`} offset={false} />
-              {name}
-            </Text>
-          ))}
-          <Text type="large" className={styles.dashboardCategoryTitle}>
-            Crime and Safety
-          </Text>
-          <DoubleBarChart barData={data.crimeData}></DoubleBarChart>
-        </div>
+        <ReportCard grades={reportCard} overall={dashboardTitle.overall} />
+        <DashboardSection
+          title="About the Residents"
+          subsections={[
+            {
+              name: 'Average Median Salary',
+              graph: <BarChart barData={data.barData} type="0" />
+            },
+            {
+              name: 'Educational Diversity',
+              graph: <PieChart pieData={data.pieData} type="0" />
+            }
+          ]}
+        />
+        <DashboardSection
+          title="About the Homes"
+          subsections={[
+            {
+              name: 'Appreciation',
+              graph: <LineChart lineData={data.lineData} />
+            },
+            {
+              name: 'Rent vs. Owned Households',
+              graph: <PieChart pieData={data.rentOwned} type="1" />
+            }
+          ]}
+        />
+        <DashboardSection
+          title="About the Neighborhood"
+          subsections={[
+            {
+              name: 'Schools',
+              graph: schools.map(({ name, rank }) => (
+                <Text type="regular">
+                  <Grade value={`#${rank}`} offset={false} />
+                  {name}
+                </Text>
+              ))
+            },
+            {
+              name: 'Crime and Safety',
+              graph: <DoubleBarChart barData={data.crimeData} />
+            }
+          ]}
+        />
       </div>
+    </div>
+  );
+};
+
+const DashboardHeading = ({ name, price, population, onClose }) => (
+  <div className={styles.dashboardNav}>
+    <div className={styles.dashboardTitle}>
+      <Text type="title1">{name}</Text>
+      <Text type="small">
+        Median Price: ${price} &nbsp; &bull; &nbsp; Population: {population}
+      </Text>
+    </div>
+    <CloseButton onClose={onClose} />
+  </div>
+);
+
+const CloseButton = ({ onClose }) => (
+  <Text type="regular" className={styles.add} onClick={onClose}>
+    X
+  </Text>
+);
+
+const ReportCard = ({ overall, grades }) => {
+  return (
+    <div>
+      <Text type="title3" className={styles.dashboardScore}>
+        Overall Haüs Score:
+        <Grade value={overall} classNames={styles.dashboardScore} />
+      </Text>
+      <div className={styles.dashboardReportCard}>
+        {grades.map(({ name, score }) => (
+          <Text type="regular">
+            <Grade value={score} />
+            {name}
+          </Text>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const DashboardSection = ({ title, subsections }) => {
+  const Section = styled.div`
+    padding: 2rem 0 1rem;
+  `;
+  return (
+    <div>
+      <Text type="title2">{title}</Text>
+      {subsections.map(({ name, graph }) => (
+        <Section>
+          <Text type="large" className={styles.dashboardCategoryTitle}>
+            {name}
+          </Text>
+          {graph}
+        </Section>
+      ))}
     </div>
   );
 };

@@ -1,15 +1,19 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
 
-const PieChart = ({ pieData }) => {
+const ATTRIBUTES = [
+  [
+    "Master's degree or higher",
+    "Bachelor's degree",
+    "Some college or associate's degree",
+    'High school diploma or equivalent',
+    'Less than high school diploma'
+  ],
+  [ "Rented", "Owned"],
+]
+const PieChart = ({ pieData, type }) => {
   const config = {
-    labels: [
-      "Master's degree or higher",
-      "Bachelor's degree",
-      "Some college or associate's degree",
-      'High school diploma or equivalent',
-      'Less than high school diploma'
-    ],
+    labels: ATTRIBUTES[type],
     datasets: [
       {
         backgroundColor: [

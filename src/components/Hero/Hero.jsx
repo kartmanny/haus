@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import logo from 'assets/img/logo.svg';
-import HeroInput from 'components/Hero/HeroInput';
+import HeroSelect from 'components/Hero/HeroSelect';
 import Text from 'components/Text';
 import styles from 'components/Hero/hero.module.scss';
 
@@ -39,7 +39,7 @@ const Hero = () => {
           We'll help you find the perfect neighborhood.
         </Text>
       </HeroDiv>
-      <HeroInput placeholder="Search for a city" id="heroInput" />
+      <HeroSelect></HeroSelect>
     </HeroContainer>
   );
 };

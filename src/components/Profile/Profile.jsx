@@ -23,10 +23,6 @@ const ProfileGridCell = styled.div`
   justify-items: center;
 `;
 
-const TextF = styled.span`
-  color: var(--seed-color-primary);
-`;
-
 const FAVORITES = [
   {
     name: 'Queen Anne',

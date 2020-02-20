@@ -1,7 +1,7 @@
 import React from 'react';
 
 import FavoriteListingItem from 'components/FavoriteListings/FavoriteListingItem';
-import styles from 'components/FavoriteListings/favoritelistings.module.scss';
+import styles from 'components/Listings/listings.module.scss';
 
 class FavoriteListings extends React.Component {
   constructor(props) {

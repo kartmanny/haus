@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Context from 'assets/context/Context';
 
 import Navbar from 'components/Navbar';
 import Hero from 'components/Hero';
@@ -9,6 +11,7 @@ import Auth from 'components/Auth';
 import Profile from 'components/Profile';
 
 import 'assets/styles/app.scss';
+import data from 'assets/data/database.json';
 
 const ROUTES = [
   { name: 'Home', url: '/haus/home', cta: false },
@@ -17,8 +20,9 @@ const ROUTES = [
 ];
 
 function App() {
+  const [state, setState] = useState(data);
   return (
-    <>
+    <Context.Provider value={{ data: state, setData: setState }}>
       <BrowserRouter>
         <Navbar routes={ROUTES} />
         <Switch>
@@ -29,7 +33,7 @@ function App() {
         </Switch>
       </BrowserRouter>
       <Footer />
-    </>
+    </Context.Provider>
   );
 }
 

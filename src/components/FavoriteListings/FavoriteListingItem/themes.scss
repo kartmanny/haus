@@ -1,0 +1,17 @@
+.swal-button--confirm {
+  background-color: var(--seed-color-primary);
+}
+
+.swal-text {
+  font-family: var(--seed-font);
+  text-align: center;
+  font-size: large;
+}
+
+.swal-button--confirm:focus, .swal-button--cancel:focus{
+  box-shadow: none;
+}
+
+button.swal-button.swal-button--confirm:hover {
+    background-color: #fc6e72;
+}

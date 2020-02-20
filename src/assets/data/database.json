@@ -1,0 +1,1767 @@
+{
+  "favorites": ["West Lake", "Queen Anne"],
+  "neighborhoods": [
+    {
+      "name": "ARBOR HEIGHTS",
+      "price": "641,000",
+      "population": "17,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "A-" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "B-" },
+        { "name": "Population", "score": "A-" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 17 },
+        { "name": "Center High School", "rank": 17 },
+        { "name": "Cleveland High School", "rank": 10 },
+        { "name": "Center School", "rank": 26 }
+      ],
+      "chartData": {
+        "barData": [44113, 23413],
+        "pieData": [72, 21, 4, 3],
+        "lineData": [
+          140000,
+          270000,
+          440000,
+          440000,
+          570000,
+          680000,
+          740000,
+          790000
+        ],
+        "crimeData": [
+          [150, 3247],
+          [463, 2784]
+        ],
+        "rentOwned": [37, 63]
+      }
+    },
+
+    {
+      "name": "ATLANTIC",
+      "price": "223,000",
+      "population": "11,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "B-" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 14 },
+        { "name": "Center High School", "rank": 11 },
+        { "name": "Cleveland High School", "rank": 9 },
+        { "name": "Center School", "rank": 20 }
+      ],
+      "chartData": {
+        "barData": [44637, 12917],
+        "pieData": [30, 13, 5, 52],
+        "lineData": [
+          100000,
+          140000,
+          270000,
+          340000,
+          410000,
+          460000,
+          540000,
+          630000
+        ],
+        "crimeData": [
+          [623, 11043],
+          [463, 2784]
+        ],
+        "rentOwned": [40, 60]
+      }
+    },
+
+    {
+      "name": "BALLARD",
+      "price": "671,000",
+      "population": "25,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A-" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A-" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 25 },
+        { "name": "Center High School", "rank": 2 },
+        { "name": "Cleveland High School", "rank": 13 },
+        { "name": "Center School", "rank": 8 }
+      ],
+      "chartData": {
+        "barData": [19973, 59055],
+        "pieData": [52, 9, 30, 9],
+        "lineData": [
+          160000,
+          230000,
+          390000,
+          450000,
+          620000,
+          780000,
+          840000,
+          1040000
+        ],
+        "crimeData": [
+          [340, 9915],
+          [463, 2784]
+        ],
+        "rentOwned": [34, 66]
+      }
+    },
+
+    {
+      "name": "BEACON HILL",
+      "price": "519,000",
+      "population": "16,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "A-" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "B-" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 28 },
+        { "name": "Center High School", "rank": 5 },
+        { "name": "Cleveland High School", "rank": 25 },
+        { "name": "Center School", "rank": 2 }
+      ],
+      "chartData": {
+        "barData": [32608, 58434],
+        "pieData": [66, 18, 5, 11],
+        "lineData": [
+          150000,
+          370000,
+          550000,
+          720000,
+          890000,
+          1060000,
+          1180000,
+          1340000
+        ],
+        "crimeData": [
+          [867, 17877],
+          [463, 2784]
+        ],
+        "rentOwned": [31, 69]
+      }
+    },
+
+    {
+      "name": "BELLTOWN",
+      "price": "137,000",
+      "population": "32,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "B-" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "A-" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 24 },
+        { "name": "Center High School", "rank": 5 },
+        { "name": "Cleveland High School", "rank": 29 },
+        { "name": "Center School", "rank": 6 }
+      ],
+      "chartData": {
+        "barData": [27178, 13846],
+        "pieData": [80, 1, 6, 13],
+        "lineData": [
+          120000,
+          280000,
+          460000,
+          500000,
+          510000,
+          570000,
+          790000,
+          860000
+        ],
+        "crimeData": [
+          [931, 13373],
+          [463, 2784]
+        ],
+        "rentOwned": [34, 66]
+      }
+    },
+
+    {
+      "name": "BITTER LAKE",
+      "price": "723,000",
+      "population": "10,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 8 },
+        { "name": "Center High School", "rank": 18 },
+        { "name": "Cleveland High School", "rank": 20 },
+        { "name": "Center School", "rank": 20 }
+      ],
+      "chartData": {
+        "barData": [32719, 21669],
+        "pieData": [54, 2, 9, 35],
+        "lineData": [
+          170000,
+          220000,
+          440000,
+          560000,
+          800000,
+          1030000,
+          1230000,
+          1410000
+        ],
+        "crimeData": [
+          [399, 5445],
+          [463, 2784]
+        ],
+        "rentOwned": [72, 28]
+      }
+    },
+
+    {
+      "name": "BROADVIEW",
+      "price": "281,000",
+      "population": "13,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A-" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 11 },
+        { "name": "Center High School", "rank": 5 },
+        { "name": "Cleveland High School", "rank": 24 },
+        { "name": "Center School", "rank": 1 }
+      ],
+      "chartData": {
+        "barData": [46161, 35380],
+        "pieData": [15, 70, 9, 6],
+        "lineData": [
+          170000,
+          180000,
+          330000,
+          550000,
+          680000,
+          890000,
+          890000,
+          940000
+        ],
+        "crimeData": [
+          [720, 8455],
+          [463, 2784]
+        ],
+        "rentOwned": [55, 45]
+      }
+    },
+
+    {
+      "name": "BRYANT",
+      "price": "560,000",
+      "population": "26,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "A-" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B-" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 1 },
+        { "name": "Center High School", "rank": 21 },
+        { "name": "Cleveland High School", "rank": 18 },
+        { "name": "Center School", "rank": 29 }
+      ],
+      "chartData": {
+        "barData": [76712, 71632],
+        "pieData": [75, 4, 7, 14],
+        "lineData": [
+          120000,
+          360000,
+          570000,
+          810000,
+          1040000,
+          1230000,
+          1360000,
+          1520000
+        ],
+        "crimeData": [
+          [197, 9024],
+          [463, 2784]
+        ],
+        "rentOwned": [53, 47]
+      }
+    },
+
+    {
+      "name": "CAPITOL HILL",
+      "price": "455,000",
+      "population": "27,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B-" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 22 },
+        { "name": "Center High School", "rank": 28 },
+        { "name": "Cleveland High School", "rank": 10 },
+        { "name": "Center School", "rank": 19 }
+      ],
+      "chartData": {
+        "barData": [13329, 12242],
+        "pieData": [78, 8, 11, 3],
+        "lineData": [
+          190000,
+          360000,
+          460000,
+          700000,
+          890000,
+          920000,
+          1000000,
+          1090000
+        ],
+        "crimeData": [
+          [716, 12500],
+          [463, 2784]
+        ],
+        "rentOwned": [39, 61]
+      }
+    },
+
+    {
+      "name": "CENTRAL DISTRICT",
+      "price": "464,000",
+      "population": "34,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "B-" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "B-" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 21 },
+        { "name": "Center High School", "rank": 16 },
+        { "name": "Cleveland High School", "rank": 1 },
+        { "name": "Center School", "rank": 10 }
+      ],
+      "chartData": {
+        "barData": [50698, 24762],
+        "pieData": [7, 78, 8, 7],
+        "lineData": [
+          140000,
+          160000,
+          170000,
+          170000,
+          330000,
+          460000,
+          670000,
+          780000
+        ],
+        "crimeData": [
+          [332, 9585],
+          [463, 2784]
+        ],
+        "rentOwned": [33, 67]
+      }
+    },
+
+    {
+      "name": "COLUMBIA CITY",
+      "price": "607,000",
+      "population": "15,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 7 },
+        { "name": "Center High School", "rank": 7 },
+        { "name": "Cleveland High School", "rank": 3 },
+        { "name": "Center School", "rank": 21 }
+      ],
+      "chartData": {
+        "barData": [57376, 77217],
+        "pieData": [89, 8, 1, 2],
+        "lineData": [
+          100000,
+          280000,
+          440000,
+          620000,
+          860000,
+          1080000,
+          1080000,
+          1280000
+        ],
+        "crimeData": [
+          [896, 15891],
+          [463, 2784]
+        ],
+        "rentOwned": [50, 50]
+      }
+    },
+
+    {
+      "name": "DELRIDGE",
+      "price": "464,000",
+      "population": "20,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 23 },
+        { "name": "Center High School", "rank": 27 },
+        { "name": "Cleveland High School", "rank": 26 },
+        { "name": "Center School", "rank": 26 }
+      ],
+      "chartData": {
+        "barData": [14993, 20271],
+        "pieData": [89, 1, 4, 6],
+        "lineData": [
+          190000,
+          230000,
+          460000,
+          630000,
+          760000,
+          860000,
+          1080000,
+          1080000
+        ],
+        "crimeData": [
+          [229, 18511],
+          [463, 2784]
+        ],
+        "rentOwned": [62, 38]
+      }
+    },
+
+    {
+      "name": "EASTLAKE",
+      "price": "392,000",
+      "population": "30,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 9 },
+        { "name": "Center High School", "rank": 5 },
+        { "name": "Cleveland High School", "rank": 28 },
+        { "name": "Center School", "rank": 16 }
+      ],
+      "chartData": {
+        "barData": [50356, 48822],
+        "pieData": [68, 12, 16, 4],
+        "lineData": [
+          170000,
+          390000,
+          620000,
+          630000,
+          700000,
+          790000,
+          990000,
+          1090000
+        ],
+        "crimeData": [
+          [938, 4278],
+          [463, 2784]
+        ],
+        "rentOwned": [40, 60]
+      }
+    },
+
+    {
+      "name": "FAUNTLEROY",
+      "price": "222,000",
+      "population": "12,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A-" },
+        { "name": "Diversity", "score": "B-" },
+        { "name": "Walk Score", "score": "B-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 25 },
+        { "name": "Center High School", "rank": 7 },
+        { "name": "Cleveland High School", "rank": 26 },
+        { "name": "Center School", "rank": 3 }
+      ],
+      "chartData": {
+        "barData": [77659, 77013],
+        "pieData": [4, 88, 5, 3],
+        "lineData": [
+          180000,
+          400000,
+          590000,
+          730000,
+          940000,
+          1100000,
+          1210000,
+          1390000
+        ],
+        "crimeData": [
+          [856, 17208],
+          [463, 2784]
+        ],
+        "rentOwned": [30, 70]
+      }
+    },
+
+    {
+      "name": "FIRST HILL",
+      "price": "164,000",
+      "population": "27,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B-" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 8 },
+        { "name": "Center High School", "rank": 25 },
+        { "name": "Cleveland High School", "rank": 29 },
+        { "name": "Center School", "rank": 27 }
+      ],
+      "chartData": {
+        "barData": [61443, 42286],
+        "pieData": [45, 17, 12, 26],
+        "lineData": [
+          120000,
+          310000,
+          470000,
+          510000,
+          740000,
+          960000,
+          1090000,
+          1240000
+        ],
+        "crimeData": [
+          [414, 5630],
+          [463, 2784]
+        ],
+        "rentOwned": [35, 65]
+      }
+    },
+
+    {
+      "name": "FREMONT",
+      "price": "251,000",
+      "population": "30,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "A-" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B-" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 20 },
+        { "name": "Center High School", "rank": 25 },
+        { "name": "Cleveland High School", "rank": 25 },
+        { "name": "Center School", "rank": 21 }
+      ],
+      "chartData": {
+        "barData": [54896, 55215],
+        "pieData": [76, 8, 1, 15],
+        "lineData": [
+          160000,
+          340000,
+          490000,
+          720000,
+          790000,
+          840000,
+          890000,
+          1000000
+        ],
+        "crimeData": [
+          [221, 7989],
+          [463, 2784]
+        ],
+        "rentOwned": [74, 26]
+      }
+    },
+
+    {
+      "name": "GENESEE",
+      "price": "450,000",
+      "population": "30,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B-" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B-" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 1 },
+        { "name": "Center High School", "rank": 2 },
+        { "name": "Cleveland High School", "rank": 2 },
+        { "name": "Center School", "rank": 28 }
+      ],
+      "chartData": {
+        "barData": [51192, 50426],
+        "pieData": [30, 32, 4, 34],
+        "lineData": [
+          160000,
+          290000,
+          480000,
+          530000,
+          630000,
+          790000,
+          950000,
+          1130000
+        ],
+        "crimeData": [
+          [428, 10547],
+          [463, 2784]
+        ],
+        "rentOwned": [37, 63]
+      }
+    },
+
+    {
+      "name": "GEORGETOWN",
+      "price": "252,000",
+      "population": "32,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "B-" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 18 },
+        { "name": "Center High School", "rank": 7 },
+        { "name": "Cleveland High School", "rank": 12 },
+        { "name": "Center School", "rank": 29 }
+      ],
+      "chartData": {
+        "barData": [77816, 73534],
+        "pieData": [26, 46, 22, 6],
+        "lineData": [
+          180000,
+          340000,
+          440000,
+          530000,
+          700000,
+          930000,
+          1100000,
+          1330000
+        ],
+        "crimeData": [
+          [230, 7116],
+          [463, 2784]
+        ],
+        "rentOwned": [57, 43]
+      }
+    },
+
+    {
+      "name": "GREEN LAKE",
+      "price": "373,000",
+      "population": "14,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A-" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "B-" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "B-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 25 },
+        { "name": "Center High School", "rank": 22 },
+        { "name": "Cleveland High School", "rank": 2 },
+        { "name": "Center School", "rank": 1 }
+      ],
+      "chartData": {
+        "barData": [29217, 49692],
+        "pieData": [17, 23, 38, 22],
+        "lineData": [
+          160000,
+          270000,
+          350000,
+          550000,
+          750000,
+          850000,
+          1020000,
+          1110000
+        ],
+        "crimeData": [
+          [740, 14663],
+          [463, 2784]
+        ],
+        "rentOwned": [38, 62]
+      }
+    },
+
+    {
+      "name": "GREENWOOD",
+      "price": "452,000",
+      "population": "32,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "B-" },
+        { "name": "Diversity", "score": "B-" },
+        { "name": "Walk Score", "score": "B-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 21 },
+        { "name": "Center High School", "rank": 11 },
+        { "name": "Cleveland High School", "rank": 21 },
+        { "name": "Center School", "rank": 19 }
+      ],
+      "chartData": {
+        "barData": [40785, 64438],
+        "pieData": [89, 3, 2, 6],
+        "lineData": [
+          140000,
+          340000,
+          490000,
+          590000,
+          610000,
+          610000,
+          720000,
+          850000
+        ],
+        "crimeData": [
+          [263, 10745],
+          [463, 2784]
+        ],
+        "rentOwned": [47, 53]
+      }
+    },
+
+    {
+      "name": "HILLMAN CITY",
+      "price": "344,000",
+      "population": "24,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "B-" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A-" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 4 },
+        { "name": "Center High School", "rank": 7 },
+        { "name": "Cleveland High School", "rank": 10 },
+        { "name": "Center School", "rank": 9 }
+      ],
+      "chartData": {
+        "barData": [49349, 21981],
+        "pieData": [51, 15, 22, 12],
+        "lineData": [
+          140000,
+          210000,
+          310000,
+          420000,
+          640000,
+          790000,
+          870000,
+          980000
+        ],
+        "crimeData": [
+          [480, 19514],
+          [463, 2784]
+        ],
+        "rentOwned": [49, 51]
+      }
+    },
+
+    {
+      "name": "LESCHI",
+      "price": "507,000",
+      "population": "27,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B-" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 14 },
+        { "name": "Center High School", "rank": 25 },
+        { "name": "Cleveland High School", "rank": 24 },
+        { "name": "Center School", "rank": 11 }
+      ],
+      "chartData": {
+        "barData": [17687, 16506],
+        "pieData": [83, 6, 7, 4],
+        "lineData": [
+          110000,
+          270000,
+          360000,
+          430000,
+          440000,
+          620000,
+          660000,
+          770000
+        ],
+        "crimeData": [
+          [157, 3074],
+          [463, 2784]
+        ],
+        "rentOwned": [40, 60]
+      }
+    },
+
+    {
+      "name": "LOWER QUEEN ANNE",
+      "price": "563,000",
+      "population": "13,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 10 },
+        { "name": "Center High School", "rank": 3 },
+        { "name": "Cleveland High School", "rank": 21 },
+        { "name": "Center School", "rank": 22 }
+      ],
+      "chartData": {
+        "barData": [19724, 49795],
+        "pieData": [26, 53, 19, 2],
+        "lineData": [
+          150000,
+          150000,
+          370000,
+          370000,
+          600000,
+          600000,
+          700000,
+          830000
+        ],
+        "crimeData": [
+          [148, 17075],
+          [463, 2784]
+        ],
+        "rentOwned": [69, 31]
+      }
+    },
+
+    {
+      "name": "MADISON PARK",
+      "price": "760,000",
+      "population": "27,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A-" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 2 },
+        { "name": "Center High School", "rank": 5 },
+        { "name": "Cleveland High School", "rank": 11 },
+        { "name": "Center School", "rank": 16 }
+      ],
+      "chartData": {
+        "barData": [31160, 53565],
+        "pieData": [37, 42, 7, 14],
+        "lineData": [
+          130000,
+          330000,
+          500000,
+          630000,
+          660000,
+          720000,
+          900000,
+          980000
+        ],
+        "crimeData": [
+          [525, 19408],
+          [463, 2784]
+        ],
+        "rentOwned": [69, 31]
+      }
+    },
+
+    {
+      "name": "MADISON VALLEY",
+      "price": "151,000",
+      "population": "19,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "A-" },
+        { "name": "Average Rent", "score": "B-" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "B-" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 18 },
+        { "name": "Center High School", "rank": 22 },
+        { "name": "Cleveland High School", "rank": 1 },
+        { "name": "Center School", "rank": 2 }
+      ],
+      "chartData": {
+        "barData": [15890, 56920],
+        "pieData": [17, 35, 45, 3],
+        "lineData": [
+          100000,
+          160000,
+          190000,
+          280000,
+          320000,
+          540000,
+          720000,
+          830000
+        ],
+        "crimeData": [
+          [788, 8783],
+          [463, 2784]
+        ],
+        "rentOwned": [45, 55]
+      }
+    },
+
+    {
+      "name": "MADRONA",
+      "price": "351,000",
+      "population": "26,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A-" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "B-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 10 },
+        { "name": "Center High School", "rank": 13 },
+        { "name": "Cleveland High School", "rank": 3 },
+        { "name": "Center School", "rank": 4 }
+      ],
+      "chartData": {
+        "barData": [41266, 16070],
+        "pieData": [40, 2, 2, 56],
+        "lineData": [
+          170000,
+          390000,
+          460000,
+          630000,
+          780000,
+          930000,
+          1120000,
+          1260000
+        ],
+        "crimeData": [
+          [203, 12837],
+          [463, 2784]
+        ],
+        "rentOwned": [40, 60]
+      }
+    },
+
+    {
+      "name": "MAGNOLIA",
+      "price": "342,000",
+      "population": "18,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 25 },
+        { "name": "Center High School", "rank": 16 },
+        { "name": "Cleveland High School", "rank": 11 },
+        { "name": "Center School", "rank": 11 }
+      ],
+      "chartData": {
+        "barData": [76661, 50730],
+        "pieData": [30, 19, 45, 6],
+        "lineData": [
+          120000,
+          120000,
+          130000,
+          220000,
+          270000,
+          460000,
+          470000,
+          650000
+        ],
+        "crimeData": [
+          [483, 3719],
+          [463, 2784]
+        ],
+        "rentOwned": [29, 71]
+      }
+    },
+
+    {
+      "name": "MONTLAKE",
+      "price": "739,000",
+      "population": "30,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "A-" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "B-" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 23 },
+        { "name": "Center High School", "rank": 22 },
+        { "name": "Cleveland High School", "rank": 15 },
+        { "name": "Center School", "rank": 29 }
+      ],
+      "chartData": {
+        "barData": [57733, 47223],
+        "pieData": [54, 42, 1, 3],
+        "lineData": [
+          130000,
+          300000,
+          320000,
+          500000,
+          670000,
+          860000,
+          900000,
+          1010000
+        ],
+        "crimeData": [
+          [707, 11300],
+          [463, 2784]
+        ],
+        "rentOwned": [48, 52]
+      }
+    },
+
+    {
+      "name": "MOUNT BAKER",
+      "price": "628,000",
+      "population": "34,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 1 },
+        { "name": "Center High School", "rank": 16 },
+        { "name": "Cleveland High School", "rank": 27 },
+        { "name": "Center School", "rank": 26 }
+      ],
+      "chartData": {
+        "barData": [56891, 66422],
+        "pieData": [17, 2, 1, 80],
+        "lineData": [
+          110000,
+          150000,
+          220000,
+          420000,
+          520000,
+          610000,
+          850000,
+          930000
+        ],
+        "crimeData": [
+          [268, 6734],
+          [463, 2784]
+        ],
+        "rentOwned": [49, 51]
+      }
+    },
+
+    {
+      "name": "NORTH ADMIRAL",
+      "price": "706,000",
+      "population": "33,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "B-" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 24 },
+        { "name": "Center High School", "rank": 27 },
+        { "name": "Cleveland High School", "rank": 14 },
+        { "name": "Center School", "rank": 3 }
+      ],
+      "chartData": {
+        "barData": [20689, 20402],
+        "pieData": [55, 30, 9, 6],
+        "lineData": [
+          100000,
+          260000,
+          500000,
+          660000,
+          790000,
+          990000,
+          1220000,
+          1460000
+        ],
+        "crimeData": [
+          [107, 3359],
+          [463, 2784]
+        ],
+        "rentOwned": [65, 35]
+      }
+    },
+
+    {
+      "name": "NORTHGATE",
+      "price": "309,000",
+      "population": "23,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 29 },
+        { "name": "Center High School", "rank": 23 },
+        { "name": "Cleveland High School", "rank": 28 },
+        { "name": "Center School", "rank": 16 }
+      ],
+      "chartData": {
+        "barData": [70580, 24880],
+        "pieData": [16, 65, 11, 8],
+        "lineData": [
+          170000,
+          350000,
+          410000,
+          510000,
+          740000,
+          750000,
+          970000,
+          1160000
+        ],
+        "crimeData": [
+          [959, 6396],
+          [463, 2784]
+        ],
+        "rentOwned": [29, 71]
+      }
+    },
+
+    {
+      "name": "PHINNEY RIDGE",
+      "price": "671,000",
+      "population": "20,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "A-" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "A-" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 15 },
+        { "name": "Center High School", "rank": 9 },
+        { "name": "Cleveland High School", "rank": 26 },
+        { "name": "Center School", "rank": 13 }
+      ],
+      "chartData": {
+        "barData": [67733, 37397],
+        "pieData": [60, 18, 2, 20],
+        "lineData": [
+          170000,
+          200000,
+          250000,
+          490000,
+          710000,
+          810000,
+          950000,
+          1000000
+        ],
+        "crimeData": [
+          [544, 13191],
+          [463, 2784]
+        ],
+        "rentOwned": [67, 33]
+      }
+    },
+
+    {
+      "name": "RAVENNA",
+      "price": "110,000",
+      "population": "20,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B-" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 7 },
+        { "name": "Center High School", "rank": 10 },
+        { "name": "Cleveland High School", "rank": 25 },
+        { "name": "Center School", "rank": 21 }
+      ],
+      "chartData": {
+        "barData": [66744, 18907],
+        "pieData": [17, 54, 16, 13],
+        "lineData": [
+          150000,
+          230000,
+          340000,
+          440000,
+          620000,
+          800000,
+          870000,
+          1110000
+        ],
+        "crimeData": [
+          [146, 17974],
+          [463, 2784]
+        ],
+        "rentOwned": [57, 43]
+      }
+    },
+
+    {
+      "name": "ROOSEVELT",
+      "price": "104,000",
+      "population": "32,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A-" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 26 },
+        { "name": "Center High School", "rank": 3 },
+        { "name": "Cleveland High School", "rank": 11 },
+        { "name": "Center School", "rank": 3 }
+      ],
+      "chartData": {
+        "barData": [76248, 47815],
+        "pieData": [88, 1, 8, 3],
+        "lineData": [
+          170000,
+          400000,
+          610000,
+          770000,
+          850000,
+          900000,
+          1040000,
+          1080000
+        ],
+        "crimeData": [
+          [123, 6241],
+          [463, 2784]
+        ],
+        "rentOwned": [35, 65]
+      }
+    },
+
+    {
+      "name": "SEAVIEW",
+      "price": "119,000",
+      "population": "16,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "B-" },
+        { "name": "Schools", "score": "A-" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A-" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 13 },
+        { "name": "Center High School", "rank": 14 },
+        { "name": "Cleveland High School", "rank": 20 },
+        { "name": "Center School", "rank": 15 }
+      ],
+      "chartData": {
+        "barData": [47730, 55962],
+        "pieData": [76, 18, 1, 5],
+        "lineData": [
+          130000,
+          150000,
+          220000,
+          450000,
+          500000,
+          530000,
+          550000,
+          590000
+        ],
+        "crimeData": [
+          [797, 6473],
+          [463, 2784]
+        ],
+        "rentOwned": [47, 53]
+      }
+    },
+
+    {
+      "name": "SOUTH LAKE UNION",
+      "price": "130,000",
+      "population": "31,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "B-" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "B" },
+        { "name": "Population", "score": "A-" },
+        { "name": "Diversity", "score": "A-" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 28 },
+        { "name": "Center High School", "rank": 26 },
+        { "name": "Cleveland High School", "rank": 27 },
+        { "name": "Center School", "rank": 7 }
+      ],
+      "chartData": {
+        "barData": [54692, 32657],
+        "pieData": [14, 59, 11, 16],
+        "lineData": [
+          170000,
+          310000,
+          340000,
+          380000,
+          460000,
+          630000,
+          760000,
+          830000
+        ],
+        "crimeData": [
+          [105, 11825],
+          [463, 2784]
+        ],
+        "rentOwned": [65, 35]
+      }
+    },
+
+    {
+      "name": "SOUTH PARK",
+      "price": "733,000",
+      "population": "16,000",
+      "overall": "B",
+      "report": [
+        { "name": "Median Home Value", "score": "B-" },
+        { "name": "Average Rent", "score": "A-" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 22 },
+        { "name": "Center High School", "rank": 21 },
+        { "name": "Cleveland High School", "rank": 17 },
+        { "name": "Center School", "rank": 28 }
+      ],
+      "chartData": {
+        "barData": [67653, 67842],
+        "pieData": [49, 29, 9, 13],
+        "lineData": [
+          150000,
+          150000,
+          330000,
+          440000,
+          450000,
+          580000,
+          680000,
+          690000
+        ],
+        "crimeData": [
+          [804, 8520],
+          [463, 2784]
+        ],
+        "rentOwned": [51, 49]
+      }
+    },
+
+    {
+      "name": "UNIVERSITY DISTRICT",
+      "price": "644,000",
+      "population": "31,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B-" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "B-" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 8 },
+        { "name": "Center High School", "rank": 20 },
+        { "name": "Cleveland High School", "rank": 6 },
+        { "name": "Center School", "rank": 16 }
+      ],
+      "chartData": {
+        "barData": [10336, 20481],
+        "pieData": [32, 54, 12, 2],
+        "lineData": [
+          170000,
+          370000,
+          430000,
+          580000,
+          740000,
+          910000,
+          930000,
+          990000
+        ],
+        "crimeData": [
+          [519, 5393],
+          [463, 2784]
+        ],
+        "rentOwned": [34, 66]
+      }
+    },
+
+    {
+      "name": "UPPER QUEEN ANNE",
+      "price": "138,000",
+      "population": "11,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "B" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 11 },
+        { "name": "Center High School", "rank": 20 },
+        { "name": "Cleveland High School", "rank": 12 },
+        { "name": "Center School", "rank": 28 }
+      ],
+      "chartData": {
+        "barData": [70724, 33393],
+        "pieData": [14, 44, 9, 33],
+        "lineData": [
+          160000,
+          400000,
+          520000,
+          640000,
+          830000,
+          1030000,
+          1050000,
+          1120000
+        ],
+        "crimeData": [
+          [345, 15451],
+          [463, 2784]
+        ],
+        "rentOwned": [51, 49]
+      }
+    },
+
+    {
+      "name": "VIEW RIDGE",
+      "price": "630,000",
+      "population": "16,000",
+      "overall": "A",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "B-" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 20 },
+        { "name": "Center High School", "rank": 9 },
+        { "name": "Cleveland High School", "rank": 4 },
+        { "name": "Center School", "rank": 22 }
+      ],
+      "chartData": {
+        "barData": [20462, 50806],
+        "pieData": [65, 32, 1, 2],
+        "lineData": [
+          150000,
+          380000,
+          470000,
+          490000,
+          710000,
+          900000,
+          1110000,
+          1240000
+        ],
+        "crimeData": [
+          [468, 6427],
+          [463, 2784]
+        ],
+        "rentOwned": [53, 47]
+      }
+    },
+
+    {
+      "name": "WALLINGFORD",
+      "price": "462,000",
+      "population": "32,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "B-" },
+        { "name": "Appreciation Score", "score": "B" },
+        { "name": "Schools", "score": "A-" },
+        { "name": "Population", "score": "B-" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "B" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 25 },
+        { "name": "Center High School", "rank": 5 },
+        { "name": "Cleveland High School", "rank": 25 },
+        { "name": "Center School", "rank": 23 }
+      ],
+      "chartData": {
+        "barData": [23631, 66714],
+        "pieData": [19, 1, 18, 62],
+        "lineData": [
+          100000,
+          260000,
+          480000,
+          600000,
+          660000,
+          830000,
+          860000,
+          920000
+        ],
+        "crimeData": [
+          [639, 4131],
+          [463, 2784]
+        ],
+        "rentOwned": [46, 54]
+      }
+    },
+
+    {
+      "name": "WESTLAKE",
+      "price": "191,000",
+      "population": "31,000",
+      "overall": "B-",
+      "report": [
+        { "name": "Median Home Value", "score": "A" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "A-" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "B" },
+        { "name": "Walk Score", "score": "A" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 5 },
+        { "name": "Center High School", "rank": 21 },
+        { "name": "Cleveland High School", "rank": 27 },
+        { "name": "Center School", "rank": 2 }
+      ],
+      "chartData": {
+        "barData": [37238, 16995],
+        "pieData": [78, 13, 7, 2],
+        "lineData": [
+          110000,
+          260000,
+          310000,
+          400000,
+          500000,
+          630000,
+          800000,
+          900000
+        ],
+        "crimeData": [
+          [419, 8697],
+          [463, 2784]
+        ],
+        "rentOwned": [60, 40]
+      }
+    },
+
+    {
+      "name": "YESLER TERRACE",
+      "price": "475,000",
+      "population": "34,000",
+      "overall": "A-",
+      "report": [
+        { "name": "Median Home Value", "score": "B" },
+        { "name": "Average Rent", "score": "A" },
+        { "name": "Appreciation Score", "score": "A" },
+        { "name": "Schools", "score": "A" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 18 },
+        { "name": "Center High School", "rank": 28 },
+        { "name": "Cleveland High School", "rank": 2 },
+        { "name": "Center School", "rank": 21 }
+      ],
+      "chartData": {
+        "barData": [52417, 46396],
+        "pieData": [52, 2, 38, 8],
+        "lineData": [
+          110000,
+          130000,
+          280000,
+          390000,
+          430000,
+          600000,
+          800000,
+          940000
+        ],
+        "crimeData": [
+          [547, 15760],
+          [463, 2784]
+        ],
+        "rentOwned": [65, 35]
+      }
+    }
+  ]
+}

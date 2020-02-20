@@ -8,6 +8,7 @@
 .st1 {
   display: inline;
 }
+
 .st2 {
   fill: #eaeaea;
   cursor: pointer;
@@ -22,4 +23,8 @@
 
 .active {
   fill: var(--seed-color-primary);
+}
+
+.st3 {
+  fill: orangered !important;
 }

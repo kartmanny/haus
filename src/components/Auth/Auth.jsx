@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+import Loader from 'react-loader-spinner';
 import { withRouter } from 'react-router-dom';
 
 import Form from 'components/Form';
@@ -12,11 +13,15 @@ const AuthContainer = styled.div`
 `;
 
 const AuthPage = ({ history }) => {
+  const [loading, setLoading] = useState(false);
   const loginSubmitHandler = ({ username, password }) => {
-    if (username === 'Kart' && password === 'Manny') {
-      history.push('/haus/profile');
-    } else {
+    if (username !== 'Kart' || password !== 'Manny') {
       alert('Invalid Login Credentials');
+    } else {
+      setLoading(true);
+      setTimeout(() => {
+        history.push('/haus/profile');
+      }, 2000);
     }
   };
 
@@ -34,26 +39,16 @@ const AuthPage = ({ history }) => {
           ]}
         />
       )
-    },
-    {
-      name: 'Register',
-      component: (
-        <Form
-          name="Register"
-          cta="Register"
-          inputs={[
-            { name: 'email', type: 'email' },
-            { name: 'username', type: 'text' },
-            { name: 'password', type: 'password' }
-          ]}
-        />
-      )
     }
   ];
   return (
     <AuthContainer>
       <Text type="title1">Log In or Register</Text>
-      <SwitchSelect components={FORMS} />
+      {loading ? (
+        <Loader type="Circles" color="#ff5a5f" height={250} width={250} />
+      ) : (
+        <SwitchSelect components={FORMS} />
+      )}
     </AuthContainer>
   );
 };

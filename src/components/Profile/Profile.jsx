@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Text from 'components/Text';
-import Listings from 'components/Listings';
+import FavoriteListings from 'components/FavoriteListings/FavoriteListings';
 import Map from 'components/Map';
 
 const Profile = styled.div`
@@ -21,6 +21,10 @@ const ProfileGridCell = styled.div`
   display: grid;
   grid-template-rows: 5rem 1fr;
   justify-items: center;
+`;
+
+const TextF = styled.span`
+  color: var(--seed-color-primary);
 `;
 
 const FAVORITES = [
@@ -60,7 +64,7 @@ const ProfileComponent = () => (
       </ProfileGridCell>
       <ProfileGridCell>
         <Text type="title2">Favorited Neighborhoods</Text>
-        <Listings listings={FAVORITES} />
+        <FavoriteListings listings={FAVORITES} />
       </ProfileGridCell>
     </ProfileGrid>
   </Profile>

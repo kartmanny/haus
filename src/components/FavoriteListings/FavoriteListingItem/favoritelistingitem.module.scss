@@ -1,0 +1,13 @@
+.add {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add:hover { 
+  color: var(--seed-color-primary);
+}

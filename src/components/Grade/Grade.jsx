@@ -12,16 +12,17 @@ const Circle = styled.span`
   height: 4rem;
   display: inline-block;
   width: 4rem;
-  background-color: ${props => colorGrade[props.value]};
+  background-color: ${props => (props.value in gradeConversion) ? gradeConversion[props.value] : 'var(--seed-color-primary)'};
   text-align: center;
   margin: 0.25rem 1rem;
 `;
-const colorGrade = { 
-  'A+': '#00B3A1', 'A': '#00B3A1', 'A-': '#20DBC8',
-  'B+': '#A7EBB2', 'B': '#81EA91', 'B-': '#67E57B',
-  'C+': '#FFDB5A', 'C': '#FFD12D', 'C-': '#FFC700',
-  'D+': '#FF9356', 'D': '#FFA579', 'D-': '#FFB18A',
-  'F+': '#FF5A5F', 'F': '#FF7579', 'F-': '#F4868A',
+
+const gradeConversion = { 
+  'A-': '#00B3A1', 'A': '#00B3A1', 'A+': '#20DBC8',
+  'B-': '#A7EBB2', 'B': '#81EA91', 'B+': '#67E57B',
+  'C-': '#FFDB5A', 'C': '#FFD12D', 'C+': '#FFC700',
+  'D-': '#FFB18A', 'D': '#FFA579', 'D+': '#FF9356',
+  'F-': '#FF5A5F', 'F': '#FF7579', 'F': '#F4868A',
 }
 
 const Grade = ({ value, offset = false }) => (

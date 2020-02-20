@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useReducer } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Context from 'assets/context/Context';
@@ -19,10 +19,24 @@ const ROUTES = [
   { name: 'Login', url: '/haus/login', cta: true }
 ];
 
+const reducer = (state, action) => {
+  switch(action.type) {
+    case 'ADD_FAVORITE': return {
+      ...state,
+      favorites: [...state.favorites, action.payload.favorite]
+    };
+    case 'REMOVE_FAVORITE': return {
+      ...data,
+      favorites: state.favorites.filter(favorite => favorite !== action.payload.favorite)
+    };
+  }
+}
+
 function App() {
-  const [state, setState] = useState(data);
+  const [state, dispatch] = useReducer(reducer, data); 
+  
   return (
-    <Context.Provider value={{ data: state, setData: setState }}>
+    <Context.Provider value={{ data: state, dispatch: dispatch }}>
       <BrowserRouter>
         <Navbar routes={ROUTES} />
         <Switch>

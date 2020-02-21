@@ -82,7 +82,14 @@ const ListingItem = ({ name, scores, onClick, ...otherProps }) => {
       <Text type="title2">{name}</Text>
       <Scores>
         {scores.map(({ name, score }, index) => (
-          <span key={index}>
+          <span
+            style={{
+              display: 'flex',
+              justifyContent: 'space-around',
+              alignItems: 'center'
+            }}
+            key={index}
+          >
             <Text type="large" capitalize={true}>
               {name}:
             </Text>

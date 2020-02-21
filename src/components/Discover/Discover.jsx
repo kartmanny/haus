@@ -13,7 +13,7 @@ const DiscoverGrid = styled.div`
   max-width: 1360px;
   margin: auto;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 10fr;
+  grid-template-rows: 1fr 5fr;
   align-items: center;
   grid-column-gap: 15rem;
   justify-items: center;
@@ -49,7 +49,13 @@ const Discover = ({ history, match = null }) => {
 
   return (
     <DiscoverGrid>
-      <Text type="title1">Seattle</Text>
+      <Text type="title1">
+        Seattle
+        <Text type="large">
+          Select one of the neighborhoods on the map, or click one of the menu
+          items on the right to see details about a neighborhood
+        </Text>
+      </Text>
       <Text type="title1">Neighborhoods</Text>
       <Map current={[currentNeighborhood]} onNeighborhoodPress={changeView} />
       {view}

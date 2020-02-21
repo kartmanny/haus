@@ -55,7 +55,7 @@ const FAVORITES = [
 const ProfileComponent = () => {
   const { data } = useContext(Context);
   const favorites = [];
-  data.favorites.forEach(favorite => {
+  (data.favorites || []).forEach(favorite => {
     const entry = data.neighborhoods.find(el => el.name === favorite);
     favorites.push(entry);
   });

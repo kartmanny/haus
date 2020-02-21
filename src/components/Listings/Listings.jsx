@@ -4,10 +4,10 @@ import Context from 'assets/context/Context';
 import ListingItem from 'components/Listings/ListingItem';
 import styles from 'components/Listings/listings.module.scss';
 
-const Listings = ({ onListingClick, ...otherProps }) => {
+const Listings = ({ onListingClick, onAddFavorite, ...otherProps }) => {
   const { data } = useContext(Context);
   return (
-    <div style={{ height: 650, overflowY: 'scroll' }}>
+    <div style={{ height: 800, overflowY: 'scroll' }}>
       {data.neighborhoods.map(({ name, report }, index) => (
         <ListingItem
           className={styles.card}

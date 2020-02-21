@@ -6,9 +6,6 @@ import Dashboard from 'components/Dashboard';
 import Text from 'components/Text';
 import Map from 'components/Map';
 
-import data from 'assets/data/data.json';
-const { info, report, chartData, listings: listingData } = data.dashboard;
-
 const DiscoverGrid = styled.div`
   display: grid;
   padding: 2rem 2rem 4rem;
@@ -22,23 +19,26 @@ const DiscoverGrid = styled.div`
 `;
 
 const Discover = () => {
-  const listings = (
-    <Listings onListingClick={neighborhood => setView(dashboard)} />
-  );
-  const dashboard = (
-    <Dashboard
-      onClose={() => setView(listings)}
-      dashboardTitle={info}
-      reportCard={report}
-      data={chartData}
-    />
-  );
+  const onDashboardClose = () => {
+    setView(listings);
+    setCurrentNeighborhood('');
+  };
+  const changeView = neighborhood => {
+    setView(
+      <Dashboard onClose={onDashboardClose} neighborhood={neighborhood} />
+    );
+    setCurrentNeighborhood(neighborhood);
+  };
+  const listings = <Listings onListingClick={changeView} />;
+
   const [view, setView] = useState(listings);
+  const [currentNeighborhood, setCurrentNeighborhood] = useState();
+
   return (
     <DiscoverGrid>
       <Text type="title1">Seattle</Text>
       <Text type="title1">Neighborhoods</Text>
-      <Map onNeighborhoodPress={neighborhood => 1} />
+      <Map current={currentNeighborhood} onNeighborhoodPress={changeView} />
       {view}
     </DiscoverGrid>
   );

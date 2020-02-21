@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
+import Context from 'assets/context/Context';
 import Text from 'components/Text';
 import Grade from 'components/Grade';
 import styles from 'components/Dashboard/dashboard.module.scss';
@@ -12,63 +13,67 @@ import DoubleBarChart from 'components/Dashboard/DoubleBarChart';
 import data from 'assets/data/data.json';
 
 const { schools } = data.dashboard;
-const Dashboard = ({ dashboardTitle, reportCard, data, onClose }) => {
+const Dashboard = ({ neighborhood, onClose }) => {
+  const { data } = useContext(Context);
+  const entry = data.neighborhoods.find(item => item.name === neighborhood);
   return (
-    <div className={styles.dashboard}>
-      <DashboardHeading
-        onClose={onClose}
-        name={dashboardTitle.name}
-        population={dashboardTitle.population}
-        price={dashboardTitle.price}
-      />
-      <div className={styles.dashboardContainer}>
-        <ReportCard grades={reportCard} overall={dashboardTitle.overall} />
-        <DashboardSection
-          title="About the Residents"
-          subsections={[
-            {
-              name: 'Average Median Salary',
-              graph: <BarChart barData={data.barData} type="0" />
-            },
-            {
-              name: 'Educational Diversity',
-              graph: <PieChart pieData={data.pieData} type="0" />
-            }
-          ]}
+    entry && (
+      <div className={styles.dashboard}>
+        <DashboardHeading
+          onClose={onClose}
+          name={entry.name}
+          population={entry.population}
+          price={entry.price}
         />
-        <DashboardSection
-          title="About the Homes"
-          subsections={[
-            {
-              name: 'Appreciation',
-              graph: <LineChart lineData={data.lineData} />
-            },
-            {
-              name: 'Rent vs. Owned Households',
-              graph: <PieChart pieData={data.rentOwned} type="1" />
-            }
-          ]}
-        />
-        <DashboardSection
-          title="About the Neighborhood"
-          subsections={[
-            {
-              name: 'Schools',
-              graph: schools.map(({ name, rank }) => (
-                <Text type="regular">
-                  <Grade value={`#${rank}`} offset={false} />
-                  {name}
-                </Text>
-              ))
-            },
-            {
-              name: 'Crime and Safety',
-              graph: <DoubleBarChart barData={data.crimeData} />
-            }
-          ]}
-        />
+        <div className={styles.dashboardContainer}>
+          <ReportCard grades={entry.report} overall={entry.overall} />
+          <DashboardSection
+            title="About the Residents"
+            subsections={[
+              {
+                name: 'Average Median Salary',
+                graph: <BarChart barData={entry.chartData.barData} type="0" />
+              },
+              {
+                name: 'Educational Diversity',
+                graph: <PieChart pieData={entry.chartData.pieData} type="0" />
+              }
+            ]}
+          />
+          <DashboardSection
+            title="About the Homes"
+            subsections={[
+              {
+                name: 'Appreciation',
+                graph: <LineChart lineData={entry.chartData.lineData} />
+              },
+              {
+                name: 'Rent vs. Owned Households',
+                graph: <PieChart pieData={entry.chartData.rentOwned} type="1" />
+              }
+            ]}
+          />
+          <DashboardSection
+            title="About the Neighborhood"
+            subsections={[
+              {
+                name: 'Schools',
+                graph: schools.map(({ name, rank }) => (
+                  <Text type="regular">
+                    <Grade value={`#${rank}`} offset={false} />
+                    {name}
+                  </Text>
+                ))
+              },
+              {
+                name: 'Crime and Safety',
+                graph: <DoubleBarChart barData={entry.chartData.crimeData} />
+              }
+            ]}
+          />
+        </div>
       </div>
-    </div>
+    )
   );
 };
 

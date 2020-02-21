@@ -16,30 +16,40 @@ import data from 'assets/data/database.json';
 const ROUTES = [
   { name: 'Home', url: '/haus/home', cta: false },
   { name: 'Discover', url: '/haus/discover', cta: false },
+  { name: 'Profile', url: '/haus/profile', cta: false },
   { name: 'Login', url: '/haus/login', cta: true }
 ];
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_FAVORITE':
-      return {
+      const newAdd = {
         ...state,
-        favorites: [...state.favorites, action.payload.favorite]
+        favorites: Array.from(
+          new Set([...state.favorites, action.payload.favorite])
+        )
       };
+      localStorage.setItem('initialState', JSON.stringify(newAdd));
+      return newAdd;
     case 'REMOVE_FAVORITE':
-      return {
+      const newRemove = {
         ...data,
         favorites: state.favorites.filter(
           favorite => favorite !== action.payload.favorite
         )
       };
+      localStorage.setItem('initialState', JSON.stringify(newRemove));
+      return newRemove;
     default:
       throw new Error();
   }
 };
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, data);
+  console.log(localStorage.getItem('initialState'));
+  const initialState = localStorage.getItem('initialState');
+  const initialStateObj = JSON.parse(initialState);
+  const [state, dispatch] = useReducer(reducer, initialStateObj || data);
   return (
     <Context.Provider value={{ data: state, dispatch: dispatch }}>
       <BrowserRouter>

@@ -4,8 +4,8 @@ import Context from 'assets/context/Context';
 import FavoriteListingItem from 'components/FavoriteListings/FavoriteListingItem';
 import styles from 'components/Listings/listings.module.scss';
 
-const FavoritesListings = ({ favorites, ...otherProps }) => {
-  const { dispatch } = useContext(Context);
+const FavoritesListings = ({ ...otherProps }) => {
+  const { data, dispatch } = useContext(Context);
   const handleDelete = name => {
     dispatch({
       type: 'REMOVE_FAVORITE',
@@ -14,9 +14,16 @@ const FavoritesListings = ({ favorites, ...otherProps }) => {
       }
     });
   };
+  const entries = [];
+  (data.favorites || []).forEach(favorite => {
+    const entry = data.neighborhoods.find(el => el.name === favorite);
+    if (entry) {
+      entries.push(entry);
+    }
+  });
   return (
     <div>
-      {favorites.map(favorite => (
+      {entries.map(favorite => (
         <FavoriteListingItem
           handleDelete={() => handleDelete(favorite.name)}
           className={styles.card}

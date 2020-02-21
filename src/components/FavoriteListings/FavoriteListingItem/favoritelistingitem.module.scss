@@ -1,6 +1,7 @@
 .add {
   padding: 1rem;
   cursor: pointer;
+  transform: translate(10px, -25px);
 }
 
 .header {
@@ -8,6 +9,6 @@
   justify-content: space-between;
 }
 
-.add:hover { 
+.add:hover {
   color: var(--seed-color-primary);
 }

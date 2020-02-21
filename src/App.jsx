@@ -20,21 +20,26 @@ const ROUTES = [
 ];
 
 const reducer = (state, action) => {
-  switch(action.type) {
-    case 'ADD_FAVORITE': return {
-      ...state,
-      favorites: [...state.favorites, action.payload.favorite]
-    };
-    case 'REMOVE_FAVORITE': return {
-      ...data,
-      favorites: state.favorites.filter(favorite => favorite !== action.payload.favorite)
-    };
+  switch (action.type) {
+    case 'ADD_FAVORITE':
+      return {
+        ...state,
+        favorites: [...state.favorites, action.payload.favorite]
+      };
+    case 'REMOVE_FAVORITE':
+      return {
+        ...data,
+        favorites: state.favorites.filter(
+          favorite => favorite !== action.payload.favorite
+        )
+      };
+    default:
+      throw new Error();
   }
-}
+};
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, data); 
-  
+  const [state, dispatch] = useReducer(reducer, data);
   return (
     <Context.Provider value={{ data: state, dispatch: dispatch }}>
       <BrowserRouter>

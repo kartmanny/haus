@@ -38,7 +38,7 @@ const Discover = () => {
     <DiscoverGrid>
       <Text type="title1">Seattle</Text>
       <Text type="title1">Neighborhoods</Text>
-      <Map onClick={() => setView(dashboard)} />
+      <Map onNeighborhoodPress={neighborhood => 1} />
       {view}
     </DiscoverGrid>
   );

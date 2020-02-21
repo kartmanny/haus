@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import cx from 'classnames';
-
-import Text from 'components/Text';
-import styles from 'components/SwitchSelect/switch-select.module.scss';
 
 const Container = styled.div`
   display: flex;

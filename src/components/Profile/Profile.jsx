@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import Text from 'components/Text';
 import FavoriteListings from 'components/FavoriteListings/FavoriteListings';
 import Map from 'components/Map';
+
+import Context from 'assets/context/Context';
 
 const Profile = styled.div`
   padding: 15rem;
@@ -50,20 +52,28 @@ const FAVORITES = [
   }
 ];
 
-const ProfileComponent = () => (
-  <Profile>
-    <Text type="title1">Welcome, Kart</Text>
-    <ProfileGrid>
-      <ProfileGridCell>
-        <Text type="title2">Favorites Map</Text>
-        <Map profile={true} />
-      </ProfileGridCell>
-      <ProfileGridCell>
-        <Text type="title2">Favorited Neighborhoods</Text>
-        <FavoriteListings listings={FAVORITES} />
-      </ProfileGridCell>
-    </ProfileGrid>
-  </Profile>
-);
+const ProfileComponent = () => {
+  const { data } = useContext(Context);
+  const favorites = [];
+  data.favorites.forEach(favorite => {
+    const entry = data.neighborhoods.find(el => el.name === favorite);
+    favorites.push(entry);
+  });
+  return (
+    <Profile>
+      <Text type="title1">Welcome, Kart</Text>
+      <ProfileGrid>
+        <ProfileGridCell>
+          <Text type="title2">Favorites Map</Text>
+          <Map />
+        </ProfileGridCell>
+        <ProfileGridCell>
+          <Text type="title2">Favorited Neighborhoods</Text>
+          <FavoriteListings favorites={favorites} />
+        </ProfileGridCell>
+      </ProfileGrid>
+    </Profile>
+  );
+};
 
 export default ProfileComponent;

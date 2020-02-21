@@ -98,8 +98,8 @@ const ReportCard = ({ overall, grades }) => {
         <Grade value={overall} classNames={styles.dashboardScore} />
       </Text>
       <div className={styles.dashboardReportCard}>
-        {grades.map(({ name, score }) => (
-          <Text type="regular">
+        {grades.map(({ name, score }, index) => (
+          <Text key={index} type="regular">
             <Grade value={score} />
             {name}
           </Text>
@@ -116,8 +116,8 @@ const DashboardSection = ({ title, subsections }) => {
   return (
     <div>
       <Text type="title2">{title}</Text>
-      {subsections.map(({ name, graph }) => (
-        <Section>
+      {subsections.map(({ name, graph }, index) => (
+        <Section key={`section-${index}`}>
           <Text type="large" className={styles.dashboardCategoryTitle}>
             {name}
           </Text>

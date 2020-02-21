@@ -1,29 +1,33 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
+import Context from 'assets/context/Context';
 import FavoriteListingItem from 'components/FavoriteListings/FavoriteListingItem';
 import styles from 'components/Listings/listings.module.scss';
 
-class FavoriteListings extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { listings: this.props.listings }
-  }
+const FavoritesListings = ({ favorites, ...otherProps }) => {
+  const { dispatch } = useContext(Context);
+  const handleDelete = name => {
+    dispatch({
+      type: 'REMOVE_FAVORITE',
+      payload: {
+        favorite: name
+      }
+    });
+  };
+  return (
+    <div>
+      {favorites.map(favorite => (
+        <FavoriteListingItem
+          handleDelete={() => handleDelete(favorite.name)}
+          className={styles.card}
+          key={favorite.name}
+          name={favorite.name}
+          scores={favorite.report.slice(0, 3)}
+          {...otherProps}
+        />
+      ))}
+    </div>
+  );
+};
 
-  delete(item) {
-    const newData = this.state.listings.filter(searchItem => searchItem.name !== item);
-    this.setState({listings: newData});
-  }
-
-  render() {
-    const {...otherProps} = this.props;
-    return (
-      <div>
-        {this.state.listings.map(({ name, scores}) => (
-          <FavoriteListingItem handleDelete={this.delete.bind(this, name)} className={styles.card} key={name} name={name} scores={scores} {...otherProps}/>
-        ))}
-      </div>
-    )
-  }
-}
-
-export default FavoriteListings;
+export default FavoritesListings;

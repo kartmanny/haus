@@ -3,10 +3,10 @@ import styled from 'styled-components';
 
 import Text from 'components/Text';
 import Grade from 'components/Grade';
-import swal from '@sweetalert/with-react'
+import swal from '@sweetalert/with-react';
 
 import styles from 'components/FavoriteListings/FavoriteListingItem/favoritelistingitem.module.scss';
-import './themes.scss'; 
+import './themes.scss';
 
 const Listing = styled.div`
   padding: 2.5rem;
@@ -24,55 +24,63 @@ const Scores = styled.div`
 `;
 
 const DeleteButton = ({ handleDelete, name }) => (
-  <Text type="regular" className={styles.add} onClick={() => {
-    swal({
-      title: 'Are you sure?',
-      content: <Text type="large"> <b>{name}</b> will be deleted from your Favorites. </Text>,
-      buttons: true,
-      icon: 'warning',
-    }).then((toDelete) => {
-      if (toDelete) {
-        swal({
-          icon: "success",
-          title: "Deleted!",
-          content: <Text type="large"> <b>{name}</b> was successfully removed from Favorites.</Text>
-        });
-        handleDelete();
-      }
-    });
-  }}>
+  <Text
+    type="large"
+    className={styles.add}
+    onClick={() => {
+      swal({
+        title: 'Are you sure?',
+        content: (
+          <Text type="large">
+            <b>{name}</b> will be deleted from your Favorites.
+          </Text>
+        ),
+        buttons: true,
+        icon: 'warning'
+      }).then(toDelete => {
+        if (toDelete) {
+          swal({
+            icon: 'success',
+            title: 'Deleted!',
+            content: (
+              <Text type="large">
+                <b>{name}</b> was successfully removed from Favorites.
+              </Text>
+            )
+          });
+          handleDelete();
+        }
+      });
+    }}
+  >
     x
   </Text>
 );
 
-class FavoriteListingItem extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { name: this.props.name, scores: this.props.scores}
-  }
-  render() {
-    const { ...otherProps } = this.props;
-    return (
-      <Listing {...otherProps}>
+const FavoritesListingItem = ({
+  name,
+  scores,
+  handleDelete,
+  ...otherProps
+}) => {
+  return (
+    <Listing {...otherProps}>
+      <div className={styles.header}>
+        <Text type="title2">{name}</Text>
+        <DeleteButton handleDelete={handleDelete} name={name} />
+      </div>
+      <Scores>
+        {scores.map(({ name, score }, index) => (
+          <span key={index}>
+            <Text type="large" capitalize={true}>
+              {name}:
+            </Text>
+            <Grade value={score} />
+          </span>
+        ))}
+      </Scores>
+    </Listing>
+  );
+};
 
-        <div className={styles.header}>
-          <Text type="title2">{this.state.name}</Text>
-          <DeleteButton handleDelete={this.props.handleDelete} name={this.state.name} />
-        </div>
-        <Scores>
-          {this.state.scores.map(({ name, value }, index) => (
-            <span key={index}>
-              <Text type="large" capitalize={true}>
-                {name}:
-              </Text>
-              <Grade value={value} />
-            </span>
-          ))}
-        </Scores>
-      </Listing>
-    );
-  }
-
-}
-
-export default FavoriteListingItem;
+export default FavoritesListingItem;

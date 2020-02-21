@@ -61,11 +61,3 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-*[data-name] {
-  fill: lightgreen;
-}
-
-*[data-name='test'] {
-  fill: orangered;
-}

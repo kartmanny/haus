@@ -9,7 +9,6 @@ const Listing = styled.div`
   border: 2px solid var(--seed-border-light);
   border-radius: 1rem;
   margin: 1rem auto 1rem 0;
-  width: 100%;
   cursor: pointer;
 `;
 
@@ -19,17 +18,17 @@ const Scores = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
 `;
 
-const ListingItem = ({ name, scores, ...otherProps }) => {
+const ListingItem = ({ name, scores, onClick, ...otherProps }) => {
   return (
-    <Listing {...otherProps}>
+    <Listing onClick={() => onClick(name)} {...otherProps}>
       <Text type="title2">{name}</Text>
       <Scores>
-        {scores.map(({ name, value }, index) => (
+        {scores.map(({ name, score }, index) => (
           <span key={index}>
             <Text type="large" capitalize={true}>
               {name}:
             </Text>
-            <Grade value={value} />
+            <Grade value={score} />
           </span>
         ))}
       </Scores>

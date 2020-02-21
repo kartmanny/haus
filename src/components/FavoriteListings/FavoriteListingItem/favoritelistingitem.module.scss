@@ -12,3 +12,9 @@
 .add:hover {
   color: var(--seed-color-primary);
 }
+
+.listingGrade {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

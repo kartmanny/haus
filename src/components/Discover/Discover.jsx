@@ -23,7 +23,7 @@ const DiscoverGrid = styled.div`
 
 const Discover = () => {
   const listings = (
-    <Listings listings={listingData} onClick={() => setView(dashboard)} />
+    <Listings onListingClick={neighborhood => setView(dashboard)} />
   );
   const dashboard = (
     <Dashboard

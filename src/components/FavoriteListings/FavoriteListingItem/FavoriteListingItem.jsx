@@ -71,7 +71,7 @@ const FavoritesListingItem = ({
       </div>
       <Scores>
         {scores.map(({ name, score }, index) => (
-          <span key={index}>
+          <span key={index} className={styles.listingGrade}>
             <Text type="large" capitalize={true}>
               {name}:
             </Text>

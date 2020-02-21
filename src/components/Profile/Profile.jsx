@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Redirect } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Text from 'components/Text';
@@ -59,7 +60,7 @@ const ProfileComponent = () => {
     const entry = data.neighborhoods.find(el => el.name === favorite);
     favorites.push(entry);
   });
-  return (
+  return data.authenticated ? (
     <Profile>
       <Text type="title1">Welcome, Kart</Text>
       <ProfileGrid>
@@ -73,6 +74,8 @@ const ProfileComponent = () => {
         </ProfileGridCell>
       </ProfileGrid>
     </Profile>
+  ) : (
+    <Redirect to="/haus/login" />
   );
 };
 

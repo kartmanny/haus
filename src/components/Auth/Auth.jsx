@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import Loader from 'react-loader-spinner';
 import { withRouter } from 'react-router-dom';
+
+import Context from 'assets/context/Context';
 
 import Form from 'components/Form';
 import Text from 'components/Text/Text';
@@ -13,6 +15,7 @@ const AuthContainer = styled.div`
 `;
 
 const AuthPage = ({ history }) => {
+  const { data, dispatch } = useContext(Context);
   const [loading, setLoading] = useState(false);
   const loginSubmitHandler = ({ username, password }) => {
     if (username !== 'Kart' || password !== 'Manny') {
@@ -20,8 +23,9 @@ const AuthPage = ({ history }) => {
     } else {
       setLoading(true);
       setTimeout(() => {
+        dispatch({ type: 'LOGIN' });
         history.push('/haus/profile');
-      }, 2000);
+      }, 1250);
     }
   };
 
@@ -43,7 +47,9 @@ const AuthPage = ({ history }) => {
   ];
   return (
     <AuthContainer>
-      <Text type="title1">Log In or Register</Text>
+      <Text type="title1" style={{ marginBottom: '3rem' }}>
+        Log In or Register
+      </Text>
       {loading ? (
         <Loader type="Circles" color="#ff5a5f" height={250} width={250} />
       ) : (

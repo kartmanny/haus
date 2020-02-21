@@ -13,13 +13,6 @@ import Profile from 'components/Profile';
 import 'assets/styles/app.scss';
 import data from 'assets/data/database.json';
 
-const ROUTES = [
-  { name: 'Home', url: '/haus/home', cta: false },
-  { name: 'Discover', url: '/haus/discover', cta: false },
-  { name: 'Profile', url: '/haus/profile', cta: false },
-  { name: 'Login', url: '/haus/login', cta: true }
-];
-
 const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_FAVORITE':
@@ -40,16 +33,62 @@ const reducer = (state, action) => {
       };
       localStorage.setItem('initialState', JSON.stringify(newRemove));
       return newRemove;
+    case 'LOGIN': {
+      const loggedIn = {
+        ...state,
+        authenticated: true
+      };
+      localStorage.setItem(
+        'authenticated',
+        JSON.stringify({ authenticated: true })
+      );
+      return loggedIn;
+    }
+    case 'LOGOUT': {
+      const loggedOut = {
+        ...state,
+        authenticated: false
+      };
+      localStorage.setItem(
+        'authenticated',
+        JSON.stringify({ authenticated: false })
+      );
+      return loggedOut;
+    }
     default:
       throw new Error();
   }
 };
 
 function App() {
-  console.log(localStorage.getItem('initialState'));
   const initialState = localStorage.getItem('initialState');
   const initialStateObj = JSON.parse(initialState);
   const [state, dispatch] = useReducer(reducer, initialStateObj || data);
+  const ROUTES = [
+    { name: 'Home', url: '/haus/home', cta: false, render: true },
+    { name: 'Discover', url: '/haus/discover', cta: false, render: true },
+    {
+      name: 'Profile',
+      url: '/haus/profile',
+      cta: false,
+      render: state.authenticated
+    },
+    {
+      name: 'Login',
+      url: '/haus/login',
+      cta: true,
+      render: !state.authenticated
+    },
+    {
+      name: 'Logout',
+      url: '#',
+      cta: true,
+      render: state.authenticated,
+      onClick: () => {
+        dispatch({ type: 'LOGOUT' });
+      }
+    }
+  ];
   return (
     <Context.Provider value={{ data: state, dispatch: dispatch }}>
       <BrowserRouter>

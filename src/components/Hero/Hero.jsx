@@ -35,7 +35,7 @@ const Hero = ({ history }) => {
   const [loading, setLoading] = useState(false);
   const beginLoading = () => {
     setLoading(true);
-    setTimeout(() => history.push('/haus/discover'), 2000);
+    setTimeout(() => history.push('/haus/discover'), 1250);
   };
   return (
     <HeroContainer>

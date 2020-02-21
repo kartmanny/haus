@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
 import logo from 'assets/img/logo.svg';
@@ -19,16 +19,29 @@ const NavItemList = styled.ul`
   margin: 0;
 `;
 
-const Navbar = ({ routes }) => (
-  <Nav>
-    <NavItemList>
-      <Logo />
-      {routes.map(({ url, name, cta }, index) => (
-        <NavItem key={index} url={url} cta={cta} name={name} />
-      ))}
-    </NavItemList>
-  </Nav>
-);
+const Navbar = ({ routes, history }) => {
+  return (
+    <Nav>
+      <NavItemList>
+        <Logo />
+        {routes
+          .filter(route => route.render)
+          .map(({ url, name, cta, onClick }, index) => (
+            <NavItem
+              key={index}
+              url={url}
+              cta={cta}
+              name={name}
+              onClick={() => {
+                if (typeof onClick === 'function') onClick();
+                if (name === 'Logout') history.push('/');
+              }}
+            />
+          ))}
+      </NavItemList>
+    </Nav>
+  );
+};
 
 const Logo = () => (
   <Link className={styles.logoContainer} to="/">
@@ -36,4 +49,4 @@ const Logo = () => (
   </Link>
 );
 
-export default Navbar;
+export default withRouter(Navbar);

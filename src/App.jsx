@@ -26,7 +26,7 @@ const reducer = (state, action) => {
       return newAdd;
     case 'REMOVE_FAVORITE':
       const newRemove = {
-        ...data,
+        ...state,
         favorites: state.favorites.filter(
           favorite => favorite !== action.payload.favorite
         )
@@ -38,10 +38,7 @@ const reducer = (state, action) => {
         ...state,
         authenticated: true
       };
-      localStorage.setItem(
-        'authenticated',
-        JSON.stringify({ authenticated: true })
-      );
+      localStorage.setItem('authenticated', true);
       return loggedIn;
     }
     case 'LOGOUT': {
@@ -49,10 +46,7 @@ const reducer = (state, action) => {
         ...state,
         authenticated: false
       };
-      localStorage.setItem(
-        'authenticated',
-        JSON.stringify({ authenticated: false })
-      );
+      localStorage.setItem('authenticated', JSON.stringify(false));
       return loggedOut;
     }
     default:
@@ -95,6 +89,12 @@ function App() {
         <Navbar routes={ROUTES} />
         <Switch>
           <Route exact path="/haus/discover" component={() => <Discover />} />
+          <Route
+            exact
+            path="/haus/discover/:neighborhood"
+            component={Discover}
+          />
+          <Route exact path="/haus/profile" component={() => <Profile />} />
           <Route exact path="/haus/login" component={() => <Auth />} />
           <Route exact path="/haus/profile" component={() => <Profile />} />
           <Route path="/" component={() => <Hero />} />

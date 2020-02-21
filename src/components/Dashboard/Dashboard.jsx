@@ -15,7 +15,9 @@ import data from 'assets/data/data.json';
 const { schools } = data.dashboard;
 const Dashboard = ({ neighborhood, onClose }) => {
   const { data } = useContext(Context);
-  const entry = data.neighborhoods.find(item => item.name === neighborhood);
+  const entry = data.neighborhoods.find(
+    item => item.name.toLowerCase() === neighborhood.toLowerCase()
+  );
   return (
     entry && (
       <div className={styles.dashboard}>

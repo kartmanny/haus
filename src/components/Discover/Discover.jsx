@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Listings from 'components/Listings';
@@ -18,7 +19,7 @@ const DiscoverGrid = styled.div`
   justify-items: center;
 `;
 
-const Discover = () => {
+const Discover = ({ history, match = null }) => {
   const onDashboardClose = () => {
     setView(listings);
     setCurrentNeighborhood('');
@@ -27,12 +28,24 @@ const Discover = () => {
     setView(
       <Dashboard onClose={onDashboardClose} neighborhood={neighborhood} />
     );
+    history.push(`/haus/discover/${neighborhood}`);
     setCurrentNeighborhood(neighborhood);
   };
   const listings = <Listings onListingClick={changeView} />;
 
-  const [view, setView] = useState(listings);
-  const [currentNeighborhood, setCurrentNeighborhood] = useState();
+  const [currentNeighborhood, setCurrentNeighborhood] = useState(
+    match.params.neighborhood
+  );
+  const [view, setView] = useState(
+    currentNeighborhood ? (
+      <Dashboard
+        onClose={onDashboardClose}
+        neighborhood={currentNeighborhood}
+      />
+    ) : (
+      listings
+    )
+  );
 
   return (
     <DiscoverGrid>
@@ -44,4 +57,4 @@ const Discover = () => {
   );
 };
 
-export default Discover;
+export default withRouter(Discover);

@@ -2,7 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 import styles from 'components/Map/map.module.scss';
 
-const Map = ({ current, onNeighborhoodPress = () => 1 }) => {
+const Map = ({ current = '', onNeighborhoodPress = () => 1 }) => {
+  current = current
+    .toLowerCase()
+    .split(' ')
+    .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+    .join(' ');
   return (
     <svg
       version="1.1"

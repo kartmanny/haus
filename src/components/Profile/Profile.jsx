@@ -66,7 +66,7 @@ const ProfileComponent = () => {
       <ProfileGrid>
         <ProfileGridCell>
           <Text type="title2">Favorites Map</Text>
-          <Map />
+          <Map current={data.favorites} />
         </ProfileGridCell>
         <ProfileGridCell>
           <Text type="title2">Favorited Neighborhoods</Text>

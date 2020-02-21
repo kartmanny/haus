@@ -27,7 +27,8 @@ const DeleteButton = ({ handleDelete, name }) => (
   <Text
     type="large"
     className={styles.add}
-    onClick={() => {
+    onClick={event => {
+      event.stopPropagation();
       swal({
         title: 'Are you sure?',
         content: (

@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Context from 'assets/context/Context';
 import FavoriteListingItem from 'components/FavoriteListings/FavoriteListingItem';
 import styles from 'components/Listings/listings.module.scss';
 
-const FavoritesListings = ({ ...otherProps }) => {
+const FavoritesListings = ({ history, ...otherProps }) => {
   const { data, dispatch } = useContext(Context);
   const handleDelete = name => {
     dispatch({
@@ -30,6 +31,7 @@ const FavoritesListings = ({ ...otherProps }) => {
           key={favorite.name}
           name={favorite.name}
           scores={favorite.report.slice(0, 3)}
+          onClick={() => history.push(`/haus/discover/${favorite.name}`)}
           {...otherProps}
         />
       ))}
@@ -37,4 +39,4 @@ const FavoritesListings = ({ ...otherProps }) => {
   );
 };
 
-export default FavoritesListings;
+export default withRouter(FavoritesListings);

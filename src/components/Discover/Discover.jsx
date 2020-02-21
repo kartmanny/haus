@@ -51,7 +51,7 @@ const Discover = ({ history, match = null }) => {
     <DiscoverGrid>
       <Text type="title1">Seattle</Text>
       <Text type="title1">Neighborhoods</Text>
-      <Map current={currentNeighborhood} onNeighborhoodPress={changeView} />
+      <Map current={[currentNeighborhood]} onNeighborhoodPress={changeView} />
       {view}
     </DiscoverGrid>
   );

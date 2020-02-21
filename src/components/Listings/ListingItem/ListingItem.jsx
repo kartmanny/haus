@@ -11,7 +11,7 @@ const Listing = styled.div`
   border: 2px solid var(--seed-border-light);
   border-radius: 1rem;
   margin: 1rem auto 1rem 0;
-  position: relative
+  position: relative;
   cursor: pointer;
 `;
 
@@ -20,28 +20,65 @@ const Scores = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 `;
-const AddButton = ({ onClick }) => {
-  return (
-    <Text
-      onClick={onClick}
-      type="title3"
-      style={{ position: 'absolute', top: 15, right: 15 }}
-    >
-      +
-    </Text>
-  );
-};
+
+const Add = styled.div`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  transition: color 0.2s;
+  &:hover {
+    span.hover {
+      color: var(--seed-color-primary) !important;
+    }
+  }
+  span.filled {
+    color: var(--seed-color-primary) !important;
+  }
+`;
+
+const AddButton = props => (
+  <Add
+    onClick={e => props.dispatchFavorite(e, props.favorite)}
+    style={{ position: 'absolute', top: 15, right: 15 }}
+  >
+    {props.favorite ? (
+      <Text className="filled" type="title3">
+        &#9829;
+      </Text>
+    ) : (
+      <Text className="hover" type="title3">
+        &#9825;
+      </Text>
+    )}
+  </Add>
+);
 
 const ListingItem = ({ name, scores, onClick, ...otherProps }) => {
-  const { dispatch } = useContext(Context);
+  const { data, dispatch } = useContext(Context);
+  const isLoggedIn = data.authenticated || false;
+  const dispatchFavorite = (e, remove) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dispatch({
+      type: remove ? 'REMOVE_FAVORITE' : 'ADD_FAVORITE',
+      payload: { favorite: name }
+    });
+  };
+  const isInFavorites = name => {
+    return data.favorites.find(
+      neighborhood => neighborhood.toLowerCase() === name.toLowerCase()
+    );
+  };
+  const shouldDisplayAdd = isLoggedIn;
+
   return (
     <Listing onClick={() => onClick(name)} {...otherProps}>
-      <AddButton
-        onClick={e => {
-          e.stopPropagation();
-          dispatch({ type: 'ADD_FAVORITE', payload: { favorite: name } });
-        }}
-      />
+      {shouldDisplayAdd && (
+        <AddButton
+          favorite={isInFavorites(name)}
+          dispatchFavorite={dispatchFavorite}
+        />
+      )}
       <Text type="title2">{name}</Text>
       <Scores>
         {scores.map(({ name, score }, index) => (

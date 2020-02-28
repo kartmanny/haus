@@ -31,7 +31,7 @@ const FavoritesListings = ({ history, ...otherProps }) => {
           key={favorite.name}
           name={favorite.name}
           scores={favorite.report.slice(0, 3)}
-          onClick={() => history.push(`/haus/discover/${favorite.name}`)}
+          onClick={() => history.push(`/haus/discover_a/${favorite.name}`)}
           {...otherProps}
         />
       ))}

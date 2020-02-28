@@ -88,10 +88,14 @@ function App() {
       <BrowserRouter>
         <Navbar routes={ROUTES} />
         <Switch>
-          <Route exact path="/haus/discover" component={() => <Discover />} />
           <Route
             exact
-            path="/haus/discover/:neighborhood"
+            path="/haus/(discover|discover_a|discover_b)"
+            component={Discover}
+          />
+          <Route
+            exact
+            path="/haus/(discover|discover_a|discover_b)/:neighborhood"
             component={Discover}
           />
           <Route exact path="/haus/profile" component={() => <Profile />} />

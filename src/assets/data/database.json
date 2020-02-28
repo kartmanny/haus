@@ -987,6 +987,47 @@
     },
 
     {
+      "name": "Industrial District 2",
+      "price": "343,000",
+      "population": "26,000",
+      "overall": "A",
+      "report": [
+        { "name": "Home Value", "score": "A" },
+        { "name": "Rent", "score": "A" },
+        { "name": "Appreciation", "score": "A" },
+        { "name": "Schools", "score": "A-" },
+        { "name": "Population", "score": "A" },
+        { "name": "Diversity", "score": "A" },
+        { "name": "Walk Score", "score": "A-" }
+      ],
+      "schools": [
+        { "name": "Ballard High School", "rank": 9 },
+        { "name": "Center High School", "rank": 10 },
+        { "name": "Cleveland High School", "rank": 4 },
+        { "name": "Center School", "rank": 23 }
+      ],
+      "chartData": {
+        "barData": [34795, 58650],
+        "pieData": [81, 9, 7, 3],
+        "lineData": [
+          100000,
+          240000,
+          310000,
+          340000,
+          440000,
+          530000,
+          670000,
+          750000
+        ],
+        "crimeData": [
+          [313, 5706],
+          [463, 2784]
+        ],
+        "rentOwned": [62, 38]
+      }
+    },
+
+    {
       "name": "Harbor Island",
       "price": "396,000",
       "population": "32,000",

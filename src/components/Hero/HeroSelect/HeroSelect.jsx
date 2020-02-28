@@ -16,22 +16,22 @@ const HeroSelect = ({ onClick }) => {
           Seattle
         </Text>
       </div>
-      <a href="#" className={cx(styles.sweepright, styles.construction)}>
+      <span className={cx(styles.sweepright, styles.construction)}>
         <Text
           type="large"
           className={cx(styles.heroSelectText, styles.constructionText)}
         >
           San Diego
         </Text>
-      </a>
-      <a href="#" className={cx(styles.sweepright, styles.construction)}>
+      </span>
+      <span href="#" className={cx(styles.sweepright, styles.construction)}>
         <Text
           type="large"
           className={cx(styles.heroSelectText, styles.constructionText)}
         >
           New York
         </Text>
-      </a>
+      </span>
     </div>
   );
 };

@@ -7,7 +7,6 @@ import Context from 'assets/context/Context';
 
 import Form from 'components/Form';
 import Text from 'components/Text/Text';
-import SwitchSelect from 'components/SwitchSelect';
 
 const AuthContainer = styled.div`
   text-align: center;
@@ -15,10 +14,10 @@ const AuthContainer = styled.div`
 `;
 
 const AuthPage = ({ history }) => {
-  const { data, dispatch } = useContext(Context);
+  const { dispatch } = useContext(Context);
   const [loading, setLoading] = useState(false);
   const loginSubmitHandler = ({ username, password }) => {
-    if (username !== 'Kart' || password !== 'Manny') {
+    if (username !== 'Veronica' || password !== 'Paul') {
       alert('Invalid Login Credentials');
     } else {
       setLoading(true);
@@ -29,22 +28,6 @@ const AuthPage = ({ history }) => {
     }
   };
 
-  const FORMS = [
-    {
-      name: 'Login',
-      component: (
-        <Form
-          name="Login"
-          cta="Log In"
-          onSubmit={loginSubmitHandler}
-          inputs={[
-            { name: 'username', type: 'text' },
-            { name: 'password', type: 'password' }
-          ]}
-        />
-      )
-    }
-  ];
   return (
     <AuthContainer>
       <Text type="title1" style={{ marginBottom: '3rem' }}>
@@ -53,7 +36,17 @@ const AuthPage = ({ history }) => {
       {loading ? (
         <Loader type="Circles" color="#ff5a5f" height={250} width={250} />
       ) : (
-        <SwitchSelect components={FORMS} />
+        <div style={{ maxWidth: '40rem', margin: 'auto' }}>
+          <Form
+            name="Login"
+            cta="Log In"
+            onSubmit={loginSubmitHandler}
+            inputs={[
+              { name: 'username', type: 'text' },
+              { name: 'password', type: 'password' }
+            ]}
+          />
+        </div>
       )}
     </AuthContainer>
   );

@@ -26,33 +26,6 @@ const ProfileGridCell = styled.div`
   justify-items: center;
 `;
 
-const FAVORITES = [
-  {
-    name: 'Queen Anne',
-    scores: [
-      { name: 'score', value: 'A+' },
-      { name: 'schools', value: 'A' },
-      { name: 'population', value: 'A-' }
-    ]
-  },
-  {
-    name: 'West Queen Anne',
-    scores: [
-      { name: 'score', value: 'B+' },
-      { name: 'schools', value: 'B' },
-      { name: 'population', value: 'B-' }
-    ]
-  },
-  {
-    name: 'South Lake Union',
-    scores: [
-      { name: 'score', value: 'C+' },
-      { name: 'schools', value: 'C' },
-      { name: 'population', value: 'C-' }
-    ]
-  }
-];
-
 const ProfileComponent = () => {
   const { data } = useContext(Context);
   const favorites = [];
@@ -62,7 +35,7 @@ const ProfileComponent = () => {
   });
   return data.authenticated ? (
     <Profile>
-      <Text type="title1">Welcome, Kart</Text>
+      <Text type="title1">Welcome, Veronica</Text>
       <ProfileGrid>
         <ProfileGridCell>
           <Text type="title2">Favorites Map</Text>

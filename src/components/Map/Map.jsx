@@ -11,6 +11,7 @@ const Map = ({ history, current = [], onNeighborhoodPress = () => 1 }) => {
         .split(' ')
         .map(s => s.charAt(0).toUpperCase() + s.substring(1))
         .join(' ');
+    else return undefined;
   });
   const shouldBeHighlighted = neighborhoodName => {
     return current.find(neighborhood => neighborhood === neighborhoodName);
@@ -527,11 +528,11 @@ const Map = ({ history, current = [], onNeighborhoodPress = () => 1 }) => {
         <path
           className={cx(
             styles.st2,
-            shouldBeHighlighted('Industrial District') && styles.active
+            shouldBeHighlighted('Industrial District 2') && styles.active
           )}
-          data-name="Industrial District"
+          data-name="Industrial District 2"
           onClick={event => {
-            onNeighborhoodPress('Industrial District');
+            onNeighborhoodPress('Industrial District 2');
             history.push(`/haus/discover/${event.target.dataset.name}`);
           }}
           d="M118.6,325.2c0.1-0.2-0.2-16.8-1.1-18.6s-0.9-1.9-0.9-1.9l-3.7-0.5c0,0-4.3-1.2-4.7,0.6s-1.6,1.6-1.6,1.6

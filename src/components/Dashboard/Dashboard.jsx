@@ -60,8 +60,8 @@ const Dashboard = ({ neighborhood, onClose }) => {
             subsections={[
               {
                 name: 'Schools',
-                graph: schools.map(({ name, rank }) => (
-                  <Text type="regular">
+                graph: schools.map(({ name, rank }, index) => (
+                  <Text type="regular" key={index}>
                     <Grade value={`#${rank}`} offset={false} />
                     {name}
                   </Text>

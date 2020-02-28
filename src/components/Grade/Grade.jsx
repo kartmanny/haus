@@ -10,8 +10,10 @@ const Circle = styled.span`
   font-weight: 500;
   border-radius: 50%;
   height: 4rem;
+  min-height: 4rem;
   display: inline-block;
   width: 4rem;
+  min-width: 4rem;
   background-color: ${props =>
     props.value in gradeConversion
       ? gradeConversion[props.value]

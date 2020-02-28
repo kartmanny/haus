@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import Dashboard from 'components/Dashboard';
 import Text from 'components/Text';
+import SwitchSelect from 'components/SwitchSelect';
+import Listings from 'components/Listings';
 import Map from 'components/Map';
 
 const DiscoverGrid = styled.div`
@@ -11,7 +13,7 @@ const DiscoverGrid = styled.div`
   padding: 2rem 2rem 4rem;
   max-width: 1360px;
   margin: auto;
-  grid-template-columns: ${props => (props.expand ? '1fr 2fr' : '1fr')};
+  grid-template-columns: ${props => (props.expand ? '1fr 1fr' : '1fr')};
   align-items: center;
   grid-column-gap: 15rem;
   justify-items: center;
@@ -20,6 +22,7 @@ const DiscoverGrid = styled.div`
 const DiscoverB = ({ history, match = null, prefix = '', current }) => {
   const onDashboardClose = () => {
     setView(false);
+    history.push(`/haus/discover${prefix}/`);
     setCurrentNeighborhood('');
   };
   const changeView = neighborhood => {
@@ -29,7 +32,6 @@ const DiscoverB = ({ history, match = null, prefix = '', current }) => {
     history.push(`/haus/discover${prefix}/${neighborhood}`);
     setCurrentNeighborhood(neighborhood);
   };
-  // const listings = <Listings onListingClick={changeView} />;
 
   const [currentNeighborhood, setCurrentNeighborhood] = useState(
     match.params.neighborhood
@@ -49,10 +51,23 @@ const DiscoverB = ({ history, match = null, prefix = '', current }) => {
         <Text type="large">
           Select one of the neighborhoods on the map to see more details
         </Text>
-        <Map
-          current={[currentNeighborhood]}
-          prefix={prefix}
-          onNeighborhoodPress={changeView}
+        <SwitchSelect
+          components={[
+            {
+              name: 'Map',
+              component: (
+                <Map
+                  current={[currentNeighborhood]}
+                  prefix={prefix}
+                  onNeighborhoodPress={changeView}
+                />
+              )
+            },
+            {
+              name: 'Neighborhoods',
+              component: <Listings onListingClick={changeView} />
+            }
+          ]}
         />
       </div>
       {view && (

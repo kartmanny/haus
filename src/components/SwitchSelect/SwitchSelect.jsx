@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import cx from 'classnames';
+
+import Text from 'components/Text';
+import styles from 'components/SwitchSelect/switch-select.module.scss';
 
 const Container = styled.div`
   display: flex;
@@ -20,12 +24,28 @@ const Switch = styled.div`
 
 const SwitchSelect = ({ components }) => {
   const [defaultView] = components;
-  const [view, setView] = useState(defaultView.component);
+  const [view, setView] = useState(defaultView);
 
   return (
     <Container>
-      <Switch columns={components.length}></Switch>
-      {view}
+      <Switch columns={components.length}>
+        {components.map(({ name, component }, index) => (
+          <div
+            className={cx(
+              styles.switchItem,
+              view.name === name && styles.active
+            )}
+            id={name}
+            key={index}
+            onClick={() => setView({ name, component })}
+          >
+            <Text type="large" className={styles.switchItemText}>
+              {name}
+            </Text>
+          </div>
+        ))}
+      </Switch>
+      {view.component}
     </Container>
   );
 };

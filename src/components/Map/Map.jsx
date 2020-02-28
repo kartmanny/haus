@@ -1,23 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import cx from 'classnames';
 import styles from 'components/Map/map.module.scss';
 
 const Map = ({
   history,
-  current = [],
-  onNeighborhoodPress = () => 1,
+  current: currentNeighborhods = [],
+  onNeighborhoodPress: onPress = () => 1,
   prefix = ''
 }) => {
-  current = current.map(str => {
-    if (typeof str === 'string')
-      return str
-        .toLowerCase()
-        .split(' ')
-        .map(s => s.charAt(0).toUpperCase() + s.substring(1))
-        .join(' ');
-    else return undefined;
-  });
+  const onNeighborhoodPress = name => {
+    onPress(name);
+    setCurrent([name]);
+  };
+  const [current, setCurrent] = useState(
+    currentNeighborhods.map(str => {
+      if (typeof str === 'string')
+        return str
+          .toLowerCase()
+          .split(' ')
+          .map(s => s.charAt(0).toUpperCase() + s.substring(1))
+          .join(' ');
+      else return undefined;
+    })
+  );
+
   const shouldBeHighlighted = neighborhoodName => {
     return current.find(neighborhood => neighborhood === neighborhoodName);
   };

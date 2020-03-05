@@ -1,5 +1,6 @@
 import React, { useReducer } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import ReactGA from 'react-ga';
+import { Switch, Route, useHistory } from 'react-router-dom';
 
 import Context from 'assets/context/Context';
 
@@ -12,6 +13,9 @@ import Profile from 'components/Profile';
 
 import 'assets/styles/app.scss';
 import data from 'assets/data/database.json';
+
+const trackingId = 'UA-159840033-1';
+ReactGA.initialize(trackingId);
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -58,6 +62,11 @@ function App() {
   const initialState = localStorage.getItem('initialState');
   const initialStateObj = JSON.parse(initialState);
   const [state, dispatch] = useReducer(reducer, initialStateObj || data);
+  const history = useHistory();
+  history.listen(location => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
   const ROUTES = [
     { name: 'Home', url: '/haus/home', cta: false, render: true },
     { name: 'Discover', url: '/haus/discover', cta: false, render: true },
@@ -85,25 +94,23 @@ function App() {
   ];
   return (
     <Context.Provider value={{ data: state, dispatch: dispatch }}>
-      <BrowserRouter>
-        <Navbar routes={ROUTES} />
-        <Switch>
-          <Route
-            exact
-            path="/haus/(discover|discover_a|discover_b)"
-            component={Discover}
-          />
-          <Route
-            exact
-            path="/haus/(discover|discover_a|discover_b)/:neighborhood"
-            component={Discover}
-          />
-          <Route exact path="/haus/profile" component={() => <Profile />} />
-          <Route exact path="/haus/login" component={() => <Auth />} />
-          <Route exact path="/haus/profile" component={() => <Profile />} />
-          <Route path="/" component={() => <Hero />} />
-        </Switch>
-      </BrowserRouter>
+      <Navbar routes={ROUTES} />
+      <Switch>
+        <Route
+          exact
+          path="/haus/(discover|discover_a|discover_b)"
+          component={Discover}
+        />
+        <Route
+          exact
+          path="/haus/(discover|discover_a|discover_b)/:neighborhood"
+          component={Discover}
+        />
+        <Route exact path="/haus/profile" component={() => <Profile />} />
+        <Route exact path="/haus/login" component={() => <Auth />} />
+        <Route exact path="/haus/profile" component={() => <Profile />} />
+        <Route path="/" component={() => <Hero />} />
+      </Switch>
       <Footer />
     </Context.Provider>
   );

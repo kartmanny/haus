@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
 
 import Context from 'assets/context/Context';
 
@@ -57,6 +58,10 @@ const ListingItem = ({ name, scores, onClick, ...otherProps }) => {
   const { data, dispatch } = useContext(Context);
   const isLoggedIn = data.authenticated || false;
   const dispatchFavorite = (e, remove) => {
+    ReactGA.event({
+      category: 'Favorite Added',
+      action: 'User added a neighborhood to their favorites'
+    });
     e.preventDefault();
     e.stopPropagation();
     dispatch({
@@ -72,7 +77,16 @@ const ListingItem = ({ name, scores, onClick, ...otherProps }) => {
   const shouldDisplayAdd = isLoggedIn;
 
   return (
-    <Listing onClick={() => onClick(name)} {...otherProps}>
+    <Listing
+      onClick={() => {
+        onClick(name);
+        ReactGA.event({
+          category: 'Listing Press',
+          action: 'User pressed a neighborhood listing panel'
+        });
+      }}
+      {...otherProps}
+    >
       {shouldDisplayAdd && (
         <AddButton
           favorite={isInFavorites(name)}

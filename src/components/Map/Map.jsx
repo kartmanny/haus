@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactGA from 'react-ga';
+
 import { withRouter } from 'react-router-dom';
 import cx from 'classnames';
 import styles from 'components/Map/map.module.scss';
@@ -10,6 +12,10 @@ const Map = ({
   prefix = ''
 }) => {
   const onNeighborhoodPress = name => {
+    ReactGA.event({
+      category: 'Map Press',
+      action: 'User pressed a neighborhood on map'
+    });
     onPress(name);
     setCurrent([name]);
   };

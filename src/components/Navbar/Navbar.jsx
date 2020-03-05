@@ -35,6 +35,12 @@ const Navbar = ({ routes, history }) => {
               onClick={() => {
                 if (typeof onClick === 'function') onClick();
                 if (name === 'Logout') history.push('/');
+                window.ga(
+                  'send',
+                  'event',
+                  'Page Navigation',
+                  'User moved to new page'
+                );
               }}
             />
           ))}

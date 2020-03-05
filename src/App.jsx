@@ -1,5 +1,4 @@
 import React, { useReducer } from 'react';
-import ReactGA from 'react-ga';
 import { Switch, Route, useHistory } from 'react-router-dom';
 
 import Context from 'assets/context/Context';
@@ -13,11 +12,6 @@ import Profile from 'components/Profile';
 
 import 'assets/styles/app.scss';
 import data from 'assets/data/database.json';
-
-const trackingId = 'UA-159840033-1';
-function initializeAnalytics() {
-  ReactGA.initialize(trackingId);
-}
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -61,14 +55,12 @@ const reducer = (state, action) => {
 };
 
 function App() {
-  initializeAnalytics();
   const initialState = localStorage.getItem('initialState');
   const initialStateObj = JSON.parse(initialState);
   const [state, dispatch] = useReducer(reducer, initialStateObj || data);
   const history = useHistory();
   history.listen(location => {
-    ReactGA.set({ page: location.pathname });
-    ReactGA.pageview(location.pathname);
+    window.ga('send', 'pageview', location.pathname);
   });
   const ROUTES = [
     { name: 'Home', url: '/haus/home', cta: false, render: true },

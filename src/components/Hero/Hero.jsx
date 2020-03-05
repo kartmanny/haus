@@ -35,6 +35,7 @@ const Hero = ({ history }) => {
   const [loading, setLoading] = useState(false);
   const beginLoading = () => {
     setLoading(true);
+    window.ga('send', 'event', 'Page Navigation', 'User moved to new page');
     setTimeout(() => history.push('/haus/discover_a'), 1250);
   };
   return (

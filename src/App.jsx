@@ -60,7 +60,7 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialStateObj || data);
   const history = useHistory();
   history.listen(location => {
-    window.ga('send', 'pageview', location.pathname);
+    window.ga('send', 'event', 'pageview', location.pathname);
   });
   const ROUTES = [
     { name: 'Home', url: '/haus/home', cta: false, render: true },

@@ -35,6 +35,10 @@
 
       ga('create', 'UA-159840033-1', 'auto');
       ga('send', 'pageview');
+
+      window.addEventListener('click', () => {
+        ga('send', 'click', 'user clicked on map');
+      });
     </script>
   </head>
   <body>

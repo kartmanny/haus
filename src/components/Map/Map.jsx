@@ -12,7 +12,7 @@ const Map = ({
   prefix = ''
 }) => {
   const onNeighborhoodPress = name => {
-    window.ga('send', 'Map Click', 'Neighborhood clicked on map');
+    window.ga('send', 'event', 'Map Click', 'Neighborhood clicked on map');
     onPress(name);
     setCurrent([name]);
   };

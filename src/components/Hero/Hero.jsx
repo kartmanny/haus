@@ -47,7 +47,7 @@ const Hero = ({ history }) => {
           <HeroDiv>
             <HeroTitleLogo>
               <img height={150} src={logo} alt="" />
-              <h1 className={styles.heroTitle}>Haüs</h1>
+              <h1 className={styles.heroTitle}>Orio</h1>
             </HeroTitleLogo>
             <Text type="title3" className={styles.heroSubtitle}>
               We're here to help you find the perfect neighborhood for your next

@@ -37,7 +37,7 @@ const SeattleOutline = styled.img`
   height: 350px;
 `;
 
-const FOOTER_TEXT = `Your home's location is super important. There's no need to have tons of tabs open just to compare various listings and neighborhoods when you're trying to find your dream home. With Haüs, you'll be able to find the perfect neighborhood for your home – give it a try! Search up a city and we'll do the rest.`;
+const FOOTER_TEXT = `Your home's location is super important. There's no need to have tons of tabs open just to compare various listings and neighborhoods when you're trying to find your dream home. With Orio, you'll be able to find the perfect neighborhood for your home – give it a try! Search up a city and we'll do the rest.`;
 
 const Footer = () => {
   return (
@@ -45,7 +45,7 @@ const Footer = () => {
       <SpaceNeedle src={washington} alt="Space Needle" />
       <FooterContainer>
         <Text type="title1" className={styles.footerTitle}>
-          Haüs
+          Orio
         </Text>
         <Text type="large" className={styles.footerText}>
           {FOOTER_TEXT}

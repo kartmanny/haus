@@ -8,11 +8,11 @@ const Discover = ({ ...otherProps }) => {
   if (typeof pathTokens[2] === 'string') {
     switch (pathTokens[2]) {
       case 'discover_a':
-        return <DiscoverA prefix="_a" />;
-      case 'discover_b':
         return <DiscoverB prefix="_b" />;
-      default:
+      case 'discover_b':
         return <DiscoverA prefix="_a" />;
+      default:
+        return <DiscoverB prefix="_b" />;
     }
   }
 };
